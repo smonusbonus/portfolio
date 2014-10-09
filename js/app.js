@@ -13,11 +13,11 @@ adaptBoxHeight(elements, winHeight);
 $("#resp-hl-home").fitText(1.23);
 
 // awesome blinking arrow
-var arrowIntvlId = window.setInterval(function() {
+/*var arrowIntvlId = window.setInterval(function() {
   $(arrow).animate({opacity: 0.3}, 800, function() {
     $(arrow).animate({opacity: 1.0}, 800);
   });
-}, 2000);
+}, 2000);*/
 
 // if window is resized update winHeight variable and 
 // adapt min-height for boxes
@@ -33,10 +33,10 @@ $(window).on("scroll", function() {
   checkTobBarStatus(scrollTop);
   
   // when user scrolls down hide arrow
-  if(scrollTop > winHeight - 250) {
+  /*if(scrollTop > winHeight - 250) {
     window.clearInterval(arrowIntvlId);
     $(arrow).fadeOut();
-  }
+  }*/
 });
 
 
