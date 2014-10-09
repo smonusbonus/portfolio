@@ -38,3 +38,188 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+body {
+  background: #4AAFC2;
+}
+
+li, p, a, h3, h4, h5, h6 {
+  font-family: "adelle-sans", sans-serif;
+}
+
+.top-bar {
+  background-color: transparent;
+  transition: background-color 0.7s;
+
+  .name h1 a {
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  .top-bar-section {
+
+    ul li,
+    li:not(.has-form) a:not(.button) {
+      background: transparent;
+      font-size: 16px;
+    }
+
+    ul li.active a {
+      background: transparent;
+      font-weight: 700;
+    }
+
+    ul li a:hover,
+    ul li.active a:hover,
+    li.active:not(.has-form) a:not(.button):hover {
+      background: transparent;
+      text-decoration: underline;
+    }
+  }
+
+  &.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    //background-color: #FFF;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+
+    ul li a,
+    li.active:not(.has-form) a:not(.button):hover {
+      color: #4AAFC2;
+    }
+
+    ul li.active {
+      background-color: #4AAFC2;
+      color: #FFF;
+    }
+  }
+}
+
+.section-wrapper {
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 160px;
+}
+
+.homepage {
+  background: #4AAFC2;
+
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+    //text-transform: uppercase;
+    color: #FFF;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFF;
+    text-align: justify;
+  }
+
+  .profile-picture {
+    width: 170px;
+    height: 170px;
+    border-radius: 100px;
+    margin-top: 10px;
+  }
+
+  .icon-box {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .fa-arrow-down {
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    margin: 0 auto;
+    width: 50px;
+    display: block;
+  }
+}
+
+.about-me {
+
+  &.personal {
+    background: #4098A8;
+  }
+  
+  &.professional {
+    background: #4FBBCF;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0 0 70px 0;
+    color: #FFF;
+    font-size: 40px;
+  }
+
+  .fact {
+    color: #FFF;
+
+    h3 {
+      text-align: center;
+      color: #FFF;
+      margin: 20px 0 20px 0;
+    }
+
+    i {
+      font-size: 90px;
+      display: block;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.statement {
+  overflow: hidden;
+  height: 400px;
+  padding: 0;
+  //background: url("../img/geometry2.png") repeat-x;
+  //background-position: 0px -150px;
+  //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+
+  img {
+    position: absolute;
+    width: 100%;
+    top: -400px;
+    left: 0;
+    opacity: 0.5;
+  }
+
+  h2 {
+    margin: 150px 0 0 0;
+    color: #FFF;
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.7);
+
+    &.quote {
+      font-style: italic;
+    }
+  }
+
+  p {
+    color: #FFF;
+    font-size: 20px;
+  }
+
+  /*.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    
+  }*/
+}
+

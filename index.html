@@ -3,161 +3,154 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation</title>
+    <title>Simon Kreiser - Portfolio</title>
+    <link rel="stylesheet" href="bower_components/fontawesome//css/font-awesome.min.css" />
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="//use.typekit.net/ijn2wjq.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
-      </div>
-    </div>
+
+    <div class="fixed">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1 class="brand tk-adelle"><a href="#">Simon Kreiser</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
     
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-          <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="active"><a href="#">Simon</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+      
+          <!-- Left Nav Section -->
+          <!--<ul class="left">
+            <li><a href="#">Left Nav Button</a></li>
+          </ul>-->
+        </section>
+      </nav>
+    </div>
+
+
+    <div class="section-wrapper homepage adapt-height">
+      <div class="row">
+        <div class="large-3 large-offset-1 columns">
+          <img src="img/profile-pic.jpg" alt="Simon Kreiser" class="profile-picture">
         </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>        
-          </div>
+        <div class="large-7 columns end">
+          <h1 id="resp-hl-home" class="hl-home tk-adelle">Please, come a little closer</h1>
+          <p class="tk-adelle-sans">and take a look. I'm a 27-year old student and I love building things. I studied Design as a Bachelor and right now I'm doing my Master's degree in Human-Computer Interaction. If you want to know more, just scroll down ... </p>
+        </div>
+      </div>
+      <div class="icon-box" id="awesome-arrow">
+        <i class="fa fa-arrow-down"></i>
+      </div>
+    </div>
+
+
+    <div class="section-wrapper statement">
+      <img src="img/water.jpg" alt="Warsaw" data-bottom-top="top: -400px;" data-top-bottom="top: -100px;" id="parallax-1">
+      <div class="row">
+        <div class="large-12 columns">
+          <h2 class="tk-adelle quote">“Design is not just what it looks like and feels like. Design is how it works.”</h2>
+          <p>Steve Jobs</p>        
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
 
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
+    <div class="section-wrapper about-me professional adapt-height">
+      <div class="row">
+        <div class="large-12 columns">
+          <h2 class="tk-adelle">This is what I do.</h2>
         </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
-        
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="small-9.columns" />
-                </div>
-                <div class="small-3 columns">
-                  <span class="postfix">.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>     
 
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-        <div class="panel">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
+        <div class="large-3 fact columns">
+          <i class="fa fa-bolt"></i>
+          <h3>Ideation and Innovation</h3>
+          <p>Among others I've been to Canada, Russia, the US, Malaysia, Latvia and I hope to see many more soon!</p>
+        </div>
+
+        <div class="large-3 fact columns">
+          <i class="fa fa-paint-brush"></i>
+          <h3>Design & Prototyping</h3>
+          <p>I love photography and through the years I accumulated quite a collection.</p>
+        </div>
+
+        <div class="large-3 fact columns">
+          <i class="fa fa-code"></i>
+          <h3>Development</h3>
+          <p>Okay, I made up this number. But I really love biking and I take my bike wherever I go.</p>
+        </div>
+
+        <div class="large-3 fact columns">
+          <i class="fa fa-money"></i>
+          <h3>Business Skills</h3>
+          <p>I know a thing or two about marketing, business development and startups.</p>
         </div>
       </div>
     </div>
+
+
+    <div class="section-wrapper statement">
+      <img src="img/warsaw.jpg" alt="Warsaw" data-bottom-top="top: -400px;" data-top-bottom="top: -100px;" id="parallax-2">
+      <div class="row">
+        <div class="large-12 columns">
+          <h2 class="tk-adelle">I'm a global citizen. I lived in the UK, Sweden, Germany and the Netherlands.</h2>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-wrapper about-me personal adapt-height">
+      <div class="row">
+        <div class="large-12 columns">
+          <h2 class="tk-adelle">This is me, in numbers.</h2>
+        </div>
+
+        <div class="large-3 fact columns">
+          <i class="fa fa-globe"></i>
+          <h3>21 countries</h3>
+          <p>I've been to Canada, Russia, the US, Malaysia, Denmark, Sweden, Estonia, Latvia and many more.</p>
+        </div>
+
+        <div class="large-3 fact columns">
+          <i class="fa fa-camera"></i>
+          <h3>12,263 pictures</h3>
+          <p>I love photography and through the years I accumulated quite a collection.</p>
+        </div>
+
+        <div class="large-3 fact columns">
+          <i class="fa fa-bicycle"></i>
+          <h3>123,274 km</h3>
+          <p>Okay, I made up this number. But I really love biking and I take my bike wherever I go.</p>
+        </div>
+
+        <div class="large-3 fact columns">
+          <i class="fa fa-futbol-o"></i>
+          <h3>231 matches</h3>
+          <p>That's how many games I watched of my favourite football club, FC Cologne, live in the stadium.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    
+
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/FitText.js/jquery.fittext.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="bower_components/skrollr/dist/skrollr.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
