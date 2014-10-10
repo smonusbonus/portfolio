@@ -39,69 +39,105 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+$soft-red: #F29384;
+$light-grey: #dae7e9;
+$dark-font-color: #293D3F;
+
+
 body {
-  background: #4AAFC2;
+  background: #7BB8BF;
+}
+
+h1, h2 {
+  font-family: "adelle", serif;
+  font-weight: 500;
+  color: #FFF;
 }
 
 li, p, a, h3, h4, h5, h6 {
   font-family: "adelle-sans", sans-serif;
+  color: #FFF;
+}
+
+::selection {
+  background: $soft-red; /* WebKit/Blink Browsers */
+  color: #FFF;
+}
+::-moz-selection {
+  background: $soft-red; /* Gecko Browsers */
+  color: #FFF;
 }
 
 .top-bar {
   background-color: transparent;
   transition: background-color 0.7s;
+  height: 49px;
 
-  .name h1 a {
+  /*.name h1 a {
     font-size: 26px;
     font-weight: 600;
-  }
+  }*/
 
   .top-bar-section {
 
-    ul li,
-    li:not(.has-form) a:not(.button) {
+    ul li {
       background: transparent;
-      font-size: 16px;
+      padding: 10px 15px 0 15px;
     }
 
-    ul li.active a {
+    ul li:not(.has-form) a:not(.button) {
       background: transparent;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 300;
+      padding: 0;
+      line-height: 25px;
+      //border-top: 3px solid transparent;
+    }
+
+    ul li.active:not(.has-form) a:not(.button) {
+      background: transparent;
+      font-weight: 500;
+      line-height: 25px;
+      //border-top: 3px solid #FFF;
     }
 
     ul li a:hover,
     ul li.active a:hover,
     li.active:not(.has-form) a:not(.button):hover {
       background: transparent;
-      text-decoration: underline;
+      line-height: 25px;
+      //border-top: 3px solid #FFF;
     }
   }
 
+  &:hover,
   &.scrolled {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(242, 147, 132, 0.95);
     //background-color: #FFF;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 
-    ul li a,
-    li.active:not(.has-form) a:not(.button):hover {
-      color: #4AAFC2;
+    /*ul li a {
+      color: #7BB8BF;
     }
 
-    ul li.active {
-      background-color: #4AAFC2;
-      color: #FFF;
-    }
+    ul li.active a,
+    li.active:not(.has-form) a:not(.button),
+    li.active:not(.has-form) a:not(.button):hover {
+      //background-color: #4AAFC2;
+      color: #7BB8BF;
+      border-bottom: 3px solid #7BB8BF;
+    }*/
   }
 }
 
 .section-wrapper {
   box-sizing: border-box;
   position: relative;
-  padding-top: 160px;
+  padding: 130px 0 100px;
 }
 
 .homepage {
-  background: #4AAFC2;
+  background-color: #7BB8BF;
   padding-top: 90px;
 
   h1 {
@@ -128,17 +164,17 @@ li, p, a, h3, h4, h5, h6 {
   }
 
   .button {
-    background-color: transparent;
+    background-color: $soft-red;
     border: 1px solid #FFF;
-    transition: background-color 0.8s, color 0.8s;
+    transition: background-color 0.6s, color 0.6s;
     text-align: center;
     width: 170px;
     display: block;
     margin: 40px auto 0;
 
     &:hover {
-      background-color: #FFF;
-      color: #4AAFC2;
+      background-color: #FF9B8B;
+      border-color: #fce8e5;
     }
   }
 
@@ -160,14 +196,6 @@ li, p, a, h3, h4, h5, h6 {
 }
 
 .about-me {
-
-  &.personal {
-    background: #4098A8;
-  }
-  
-  &.professional {
-    background: #4FBBCF;
-  }
 
   h2 {
     text-align: center;
@@ -200,24 +228,23 @@ li, p, a, h3, h4, h5, h6 {
 
 .statement {
   overflow: hidden;
-  height: 400px;
-  padding: 0;
+  padding: 140px 0 120px;
+  background-color: #dae7e9;
   //background: url("../img/geometry2.png") repeat-x;
   //background-position: 0px -150px;
   //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 
-  img {
-    position: absolute;
-    width: 100%;
-    top: -400px;
-    left: 0;
-    opacity: 0.5;
+  .divider {
+    width: 10%;
+    height: 5px;
+    background-color: #293d3f;
+    display: block;
+    margin: 30px 0 25px;
   }
 
   h2 {
-    margin: 150px 0 0 0;
-    color: #FFF;
-    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.7);
+    color: $dark-font-color;
+    //text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.7);
 
     &.quote {
       font-style: italic;
@@ -225,19 +252,117 @@ li, p, a, h3, h4, h5, h6 {
   }
 
   p {
-    color: #FFF;
+    color: $dark-font-color;
     font-size: 20px;
   }
 
-  /*.shadow {
+  .fa-plane {
+    font-size: 200px;
+    color: #D4E0E2;
     position: absolute;
-    top: 0;
+    right: 120px;
+    bottom: -60px;
+    z-index: 1;
+  }
+}
+
+.projects {
+  h2 {
+    margin: 0 0 60px 0;
+  }
+
+  h3 {
+    margin: 20px 0 15px;
+  }
+}
+
+.contact {
+  background-color: #6B9FA5;
+  color: #FFF;
+
+  .intro {
+    margin-bottom: 50px;
+
+    h2, p {
+      text-align: center;
+    }
+  }
+
+  .send-email-icon {
+    background-color: $soft-red;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    text-align: center;
+    margin: 0 auto 40px auto;
+
+    .fa-paper-plane {
+      font-size: 40px;
+      text-shadow: 1px 3px 0 rgba(0, 0, 0, 0.05);
+      margin: 26px 0 0 -6px;
+    }
+  }
+
+  .email-field {
+    font-family: "adelle-sans", sans-serif;
+    font-size: 18px;
+    padding: 8px 30px 10px 30px;
+    display: block;
+    background-color: $light-grey;
+    border: 1px solid transparent;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    color: #293D3F;
+
+    &.active {
+      box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+      border: 1px solid #5c9096;
+    }
+  }
+
+  .social-media {
+    height: 63px;
+    position: absolute;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #293D3F;
+    padding: 18px 0 0 0;
 
-    
-  }*/
+    .links {
+      text-align: center;
+    }
+
+    p {
+      float: left;
+      margin: 0 20px 0 0;
+      color: #788789;
+    }
+
+    ul li {
+      list-style-type: none;
+      float: left;
+      margin: -3px 15px 0 0;
+
+      a {
+
+        .fa {
+          font-size: 26px;
+          margin: 0 8px 0;
+          position: relative;
+          top: 4px;
+        }
+      }
+
+      &:hover {
+        pointer: cursor;
+
+        a {
+        color: $soft-red;
+        }
+      }
+    }
+  }
 }
 

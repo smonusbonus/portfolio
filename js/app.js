@@ -8,16 +8,12 @@ var s = skrollr.init(),
   elements = $(".adapt-height"),
   arrow = $("#awesome-arrow");
 
+// init skrollr menu
+skrollr.menu.init(s);
+
 // initially set proper box height and fit text
 adaptBoxHeight(elements, winHeight);
-$("#resp-hl-home").fitText(1.23);
-
-// awesome blinking arrow
-/*var arrowIntvlId = window.setInterval(function() {
-  $(arrow).animate({opacity: 0.3}, 800, function() {
-    $(arrow).animate({opacity: 1.0}, 800);
-  });
-}, 2000);*/
+//$("#resp-hl-home").fitText(1.23);
 
 // if window is resized update winHeight variable and 
 // adapt min-height for boxes
@@ -40,6 +36,30 @@ $(window).on("scroll", function() {
 });
 
 
+$(".top-bar-section a").on("click", function() {
+  changeNavActive(this);
+});
+
+$(document).on("click", function() {
+  $("#email-field").removeClass("active");
+});
+
+$("#email-field").on("click", function(e) {
+  e.stopPropagation();
+  selectText("email-field");
+  $(this).addClass("active");
+});
+
+
+
+/*  --------------------
+    function definitions
+    --------------------
+*/
+function changeNavActive(clickedElm) {
+  $(clickedElm).parent("li").addClass("active").siblings().removeClass("active");
+}
+
 function checkTobBarStatus(scrollTop) {
   var topBar = $(".top-bar");
 
@@ -58,5 +78,24 @@ function adaptBoxHeight(elements, winHeight) {
   $(elements).css("min-height", winHeight);
   $(elements[0]).css("min-height", winHeight - 45);
 
-  s.refresh($("#parallax-1"), $("#parallax-2"));
+  //s.refresh($("#parallax-1"), $("#parallax-2"));
+}
+
+// http://stackoverflow.com/questions/11128130/select-text-in-javascript
+function selectText(element) {
+    var doc = document, 
+      text = doc.getElementById(element), 
+      range, selection;
+
+    if (doc.body.createTextRange) {
+        range = document.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+    } else if (window.getSelection) {
+        selection = window.getSelection();        
+        range = document.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
 }
