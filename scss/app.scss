@@ -59,6 +59,16 @@ li, p, a, h3, h4, h5, h6 {
   color: #FFF;
 }
 
+.reveal-modal {
+  h2, p {
+    color: $dark-font-color;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+
 ::selection {
   background: $soft-red; /* WebKit/Blink Browsers */
   color: #FFF;
