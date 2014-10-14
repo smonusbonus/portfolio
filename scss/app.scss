@@ -60,12 +60,91 @@ li, p, a, h3, h4, h5, h6 {
 }
 
 .reveal-modal {
-  h2, p {
+  h2, h3, h4, p {
     color: $dark-font-color;
   }
 
   h2 {
     font-size: 26px;
+  }
+
+  .intro {
+    padding: 0 0 20px 0;
+
+    p {
+      text-align: justify;
+    }
+  }
+
+  .slideshow {
+    padding: 0;
+  }
+
+  .project-details {
+    background-color: $light-grey;
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+    h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    p, a {
+      color: $dark-font-color;
+      font-size: 13px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    a:hover {
+      color: $soft-red;
+    }
+
+    ul {
+      margin-left: 0;
+      margin-bottom: 10px;
+
+      li {
+        list-style-type: none;
+        color: $dark-font-color;
+        font-size: 13px;
+      }
+    }
+  }
+
+  // styling of slideshow elements
+  .slick-prev, .slick-next {
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      &:before {
+        color: $soft-red;
+      }
+    }
+  }
+
+  .slick-prev {
+    left: 10px;
+  }
+
+  .slick-next {
+    right: 10px;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 30px;
+    color: $soft-red;
+    opacity: 1.0;
+  }
+
+  .slick-dots {
+    margin-left: 0;
+    bottom: -55px;
   }
 }
 

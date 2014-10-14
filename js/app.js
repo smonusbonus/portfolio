@@ -2,6 +2,11 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
+// init slick carousel
+/*$(document).ready(function() {
+  $('.project-fb-graph-slideshow').slick();
+});*/
+
 // global variables
 var s = skrollr.init(),
   winHeight = $(window).height(),
@@ -13,19 +18,28 @@ skrollr.menu.init(s);
 
 // initially set proper box height and fit text
 adaptBoxHeight(elements, winHeight);
-//$("#resp-hl-home").fitText(1.23);
 
-
-/*window.setTimeout(function() {
-  
-  console.log(sectionsArray);
-}, 500);*/
 
 
 /*  --------------------
     event listeners
     --------------------
 */
+
+/*$(".open-modal").on("click", function() {
+  $(".project-fb-graph-slideshow").resize();
+});*/
+var firstTimeModal = true;
+$(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
+  var modal = $(this);
+  //console.log(this);
+  //$(".project-fb-graph-slideshow").slickSetOption({dots: true});
+  if(firstTimeModal === true) {
+    $('.project-fb-graph-slideshow').slick({dots: true});
+  }
+  firstTimeModal = false;
+});
+
 
 // if window is resized update winHeight variable and 
 // adapt min-height for boxes
@@ -47,13 +61,9 @@ $(window).on("scroll", function() {
   window.clearTimeout(timeoutID);
   timeoutID = window.setTimeout(function() {
     sectionsArray = calcSectionsHeight($("#skrollr-nav"));
-    console.log(sectionsArray);
     activeSection = defineActiveSection(sectionsArray, scrollTop);
-    console.log(activeSection);
-
     changeNavActive($('a[href$="' + activeSection + '"]'));
   }, 50);
-  
 });
 
 
