@@ -2,11 +2,11 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-// init skrollr for parallax scrolling
+// global variables
 var s = skrollr.init(),
   winHeight = $(window).height(),
   elements = $(".adapt-height"),
-  arrow = $("#awesome-arrow");
+  timeoutID;
 
 // init skrollr menu
 skrollr.menu.init(s);
@@ -14,6 +14,18 @@ skrollr.menu.init(s);
 // initially set proper box height and fit text
 adaptBoxHeight(elements, winHeight);
 //$("#resp-hl-home").fitText(1.23);
+
+
+/*window.setTimeout(function() {
+  
+  console.log(sectionsArray);
+}, 500);*/
+
+
+/*  --------------------
+    event listeners
+    --------------------
+*/
 
 // if window is resized update winHeight variable and 
 // adapt min-height for boxes
@@ -24,19 +36,28 @@ $(window).on("resize", function() {
 
 // when user scrolls
 $(window).on("scroll", function() {
-  var scrollTop = $(document).scrollTop();
+  var scrollTop = $(document).scrollTop(),
+    sectionsArray;
 
   checkTobBarStatus(scrollTop);
+
+  // clear timeout before starting new one
+  // prohibits function from triggering all the time
+  // when user scrolls
+  window.clearTimeout(timeoutID);
+  timeoutID = window.setTimeout(function() {
+    sectionsArray = calcSectionsHeight($("#skrollr-nav"));
+    console.log(sectionsArray);
+    activeSection = defineActiveSection(sectionsArray, scrollTop);
+    console.log(activeSection);
+
+    changeNavActive($('a[href$="' + activeSection + '"]'));
+  }, 50);
   
-  // when user scrolls down hide arrow
-  /*if(scrollTop > winHeight - 250) {
-    window.clearInterval(arrowIntvlId);
-    $(arrow).fadeOut();
-  }*/
 });
 
 
-$(".top-bar-section a").on("click", function() {
+$(".top-bar a").on("click", function() {
   changeNavActive(this);
 });
 
@@ -57,7 +78,24 @@ $("#email-field").on("click", function(e) {
     --------------------
 */
 function changeNavActive(clickedElm) {
-  $(clickedElm).parent("li").addClass("active").siblings().removeClass("active");
+  $(clickedElm).parents(".top-bar").find("li.active").removeClass("active");
+  $(clickedElm).parents("li").addClass("active");
+}
+
+function defineActiveSection(sectionsArray, currentScrollHeight) {
+  var index = 0,
+    activeId = '';
+
+  while(index < sectionsArray["pos"].length) {
+    if((currentScrollHeight + 70) >= sectionsArray["pos"][index] && currentScrollHeight < sectionsArray["pos"][(index + 1)] && index < sectionsArray.length) {
+      activeId = sectionsArray["ids"][index];
+    } else if((currentScrollHeight + 70) >= sectionsArray["pos"][index]) {
+      activeId = sectionsArray["ids"][index];
+    }
+    index++;
+  }
+
+  return activeId;
 }
 
 function checkTobBarStatus(scrollTop) {
@@ -99,3 +137,31 @@ function selectText(element) {
         selection.addRange(range);
     }
 }
+
+
+function calcSectionsHeight(nav) {
+  var elmId,
+    elmPos,
+    sectionsArray = [],
+    idArray = [],
+    posArray = [];
+
+  idArray.push('#homepage');
+  posArray.push(0.0);
+
+  console.log();
+
+  $(nav).children('li').each(function() {
+    elmId = this.children[0].hash;
+    idArray.push(elmId);
+    elmPos = $(elmId).offset();
+    posArray.push(elmPos.top);
+  });
+
+  sectionsArray.ids = idArray;
+  sectionsArray.pos = posArray;
+
+  return sectionsArray;
+}
+
+

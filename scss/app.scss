@@ -40,9 +40,9 @@
 //   "foundation/components/visibility";
 
 $soft-red: #F29384;
+$soft-red-rgb: rgb(242, 147, 132);
 $light-grey: #dae7e9;
 $dark-font-color: #293D3F;
-
 
 body {
   background: #7BB8BF;
@@ -63,6 +63,7 @@ li, p, a, h3, h4, h5, h6 {
   background: $soft-red; /* WebKit/Blink Browsers */
   color: #FFF;
 }
+
 ::-moz-selection {
   background: $soft-red; /* Gecko Browsers */
   color: #FFF;
@@ -71,12 +72,14 @@ li, p, a, h3, h4, h5, h6 {
 .top-bar {
   background-color: transparent;
   transition: background-color 0.7s;
-  height: 49px;
+  height: 47px;
 
-  /*.name h1 a {
-    font-size: 26px;
+  .name h1 a {
+    opacity: 0.0;
+    font-size: 15px;
     font-weight: 600;
-  }*/
+    transition: opacity 0.7s;
+  }
 
   .top-bar-section {
 
@@ -87,16 +90,18 @@ li, p, a, h3, h4, h5, h6 {
 
     ul li:not(.has-form) a:not(.button) {
       background: transparent;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 300;
       padding: 0;
       line-height: 25px;
+      color: rgb(255, 255, 255);
+      transition: color 1.0s;
       //border-top: 3px solid transparent;
     }
 
     ul li.active:not(.has-form) a:not(.button) {
       background: transparent;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 25px;
       //border-top: 3px solid #FFF;
     }
@@ -104,29 +109,23 @@ li, p, a, h3, h4, h5, h6 {
     ul li a:hover,
     ul li.active a:hover,
     li.active:not(.has-form) a:not(.button):hover {
-      background: transparent;
-      line-height: 25px;
+      color: $soft-red-rgb;
       //border-top: 3px solid #FFF;
     }
   }
 
   &:hover,
   &.scrolled {
-    background-color: rgba(242, 147, 132, 0.95);
-    //background-color: #FFF;
+    background-color: rgba(40, 69, 73, 0.95);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 
-    /*ul li a {
-      color: #7BB8BF;
+    li.active:not(.has-form) a:not(.button) {
+      color: $soft-red-rgb;
     }
 
-    ul li.active a,
-    li.active:not(.has-form) a:not(.button),
-    li.active:not(.has-form) a:not(.button):hover {
-      //background-color: #4AAFC2;
-      color: #7BB8BF;
-      border-bottom: 3px solid #7BB8BF;
-    }*/
+    .name h1 a {
+      opacity: 1.0;
+    }
   }
 }
 
@@ -327,7 +326,7 @@ li, p, a, h3, h4, h5, h6 {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #293D3F;
+    background-color: rgba(40, 69, 73, 0.97);
     padding: 18px 0 0 0;
 
     .links {
@@ -337,7 +336,7 @@ li, p, a, h3, h4, h5, h6 {
     p {
       float: left;
       margin: 0 20px 0 0;
-      color: #788789;
+      color: #6B9FA5;
     }
 
     ul li {
