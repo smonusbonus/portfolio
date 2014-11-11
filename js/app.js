@@ -33,7 +33,7 @@ $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
   //console.log(this);
   //$(".project-fb-graph-slideshow").slickSetOption({dots: true});
   //if(firstTimeModal === true) {
-  $('#' + modal[0]['id'] + ' .project-slideshow').slick({dots: true});
+  $('#' + modal[0]['id'] + ' .project-slideshow').slick({dots: true, lazyLoad: 'ondemand'});
   //}
   //firstTimeModal = false;
 });
