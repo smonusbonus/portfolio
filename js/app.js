@@ -26,10 +26,7 @@ adaptBoxHeight(elements, winHeight);
     --------------------
 */
 
-/*$(".open-modal").on("click", function() {
-  $(".project-fb-graph-slideshow").resize();
-});*/
-var firstTimeModal = true;
+//var firstTimeModal = true;
 $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
   var modal = $(this);
   console.log(modal);
@@ -45,7 +42,7 @@ $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
 // if window is resized update winHeight variable and 
 // adapt min-height for boxes
 $(window).on("resize", function() {
-  winHeight = $(window).height()
+  winHeight = $(window).height();
   adaptBoxHeight(elements, winHeight);
 });
 
@@ -112,8 +109,13 @@ function defineActiveSection(sectionsArray, currentScrollHeight) {
 
 function updateUrl(id) {
   var stateObj = { stateId: id };
-  history.pushState(stateObj, '', id);
-  //window.location = id;
+  try {
+    history.pushState(stateObj, '', id);
+    //window.location = id;
+  }
+  catch(err) {
+    // Handle error(s) here
+  }
 }
 
 function checkTobBarStatus(scrollTop) {
@@ -129,7 +131,7 @@ function checkTobBarStatus(scrollTop) {
 // make sure boxes have min-height of browser window
 function adaptBoxHeight(elements, winHeight) {
 
-  if(winHeight < 480) { winHeight = 480; } 
+  if(winHeight < 500) { winHeight = 500; } 
 
   $(elements).css("min-height", winHeight);
   $(elements[0]).css("min-height", winHeight - 45);

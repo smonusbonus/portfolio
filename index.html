@@ -2,18 +2,27 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Some configurations for mobile browsers  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <title>Simon Kreiser - Portfolio</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="bower_components/fontawesome//css/font-awesome.min.css" />
     <link rel="stylesheet" href="stylesheets/app.css" />
     <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick.css" />
+
+    <!-- Javascript that's needed on page load -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="//use.typekit.net/ijn2wjq.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
 
-    <div class="fixed">
+    <div class="fixed hide-for-small-only">
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
@@ -36,391 +45,385 @@
       </nav>
     </div>
 
+    <!-- needed for mobile browsers -->
+    <div id="skrollr-body">
 
-    <div class="section-wrapper homepage adapt-height" id="homepage" data-menu-offset="-45">
-      <div class="row">
-        <div class="large-12 medium-12 columns">
-          <img src="img/profile-pic.jpg" alt="Simon Kreiser" class="profile-picture">
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-12 medium-12 columns">
-          <h1 class="hl-home tk-adelle-sans">Simon Kreiser</h1>
-          <p>I deeply care about design, the web and technology.</p>
-          <!--<p class="tk-adelle-sans">and take a look. I'm a 27-year old student and I love building things. I studied Design as a Bachelor and right now I'm doing my Master's degree in Human-Computer Interaction. If you want to know more, just scroll down ... </p>-->
-          <a href="#who-am-i" class="button radius round">Learn more</a>
-        </div>
-      </div>
-      <!--<div class="icon-box" id="awesome-arrow">
-        <i class="fa fa-arrow-down"></i>
-      </div>-->
-    </div>
-
-
-    <div class="section-wrapper who-am-i statement adapt-height" id="who-am-i">
-      <!--<img src="img/warsaw.jpg" alt="Warsaw" data-bottom-top="top: -400px;" data-top-bottom="top: -100px;" id="parallax-2">-->
-      <div class="row">
-        <div class="large-12 medium-12 columns">
-          <h2>I'm a designer and hacker. <br> I love building products for the digital age.</h2>
-          <span class="divider"></span>
-          <p>For the past year I've been living in Stockholm doing a graduate degree at the Royal Institute of Technology in the field of Human-Computer Interaction. Before, I worked as a designer and front-end developer on a freelance basis in my hometown Cologne. My two main clients were a global PR agency and medium-sized online marketing agency. Since I started developing my first websites when I was 12, my interests have expanded to other areas, such as Interaction Design, Speech and Language Processing and Data Visualization.</p>
-
-          <!--<p>I'm 27-year old, and I’m passionate about technology and design. I’m a Javascript-enthusiast and interested in data visualization and startups. Right now I’m living in Stockholm where I study Human-computer interaction. When I’m not sitting in front of my computer I’m photographing, travelling or enjoying Indian food.</p>-->
-        </div>
-      </div>
-      <!--<i class="fa fa-plane"></i>-->
-    </div>
-
-
-    <div class="section-wrapper about-me professional adapt-height" id="competencies">
-      <div class="row">
-        <div class="large-12 medium-12 columns">
-          <h2>My Competencies</h2>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="large-3 medium-3 fact columns">
-          <i class="fa fa-users"></i>
-          <h3>User-Centered Design</h3>
-          <p>I love working on prototypes, thinking about information architecture or evaluating the usability of an existing piece of software.</p>
-        </div>
-
-        <div class="large-3 medium-3 fact columns">
-          <i class="fa fa-paint-brush"></i>
-          <h3>Design &amp; Branding</h3>
-          <p>I'm obsessed with details, typography, grids, colors and everything that's related to the visual apperance of a digital brand.</p>
-        </div>
-
-        <div class="large-3 medium-3 fact columns">
-          <i class="fa fa-code"></i>
-          <h3>Web Development</h3>
-          <p>I've got a lot of love for html, CSS and Javascript and have been working with PHP for a while now. Lately I've been experimenting with Python and Node.js.</p>
-        </div>
-
-        <div class="large-3 medium-3 fact columns">
-          <i class="fa fa-money"></i>
-          <h3>Marketing &amp; Entrepreneurship</h3>
-          <p>I know a thing or two about marketing, business development and startups.</p>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="section-wrapper statement">
-      <div class="row">
-        <div class="large-12 medium-12 columns">
-          <h2 class="quote">“Design is not just what it looks like and feels like. Design is how it works.”</h2>
-          <span class="divider"></span>
-          <p>Steve Jobs</p>        
-        </div>
-      </div>
-    </div>
-
-
-    <div class="section-wrapper projects adapt-height" id="projects">
-      <div class="row">
-        <div class="large-12 medium-12 columns">
-          <h2>These are my most recent projects</h2>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="large-4 medium-4 columns project">
-          <div class="img-wrapper" data-reveal-id="project-fb-graph" class="open-modal">
-            <div class="img-overlay"><p>+</p></div>
-            <img src="img/projects/facebook-graph.jpg" alt="Facebook Graph Visualisation">
-          </div>
-          <h3 data-reveal-id="project-fb-graph" class="open-modal">VIZEX – Facebook Graph Speech Exploration</h3>
-          <p>VIZEX is an interactive visualization of a user's Facebook Social Graph. It allows the user to query certain features of the network and be presented with a visual result.</p>
-        </div>
-
-        <div class="large-4 medium-4 columns project">
-          <div class="img-wrapper" data-reveal-id="project-exp-tracker" class="open-modal">
-            <div class="img-overlay"><p>+</p></div>
-            <img src="img/projects/expense-tracker.jpg" alt="Expense Tracker">
-          </div>
-          <h3 data-reveal-id="project-exp-tracker" class="open-modal">Expense Tracker Mobile App</h3>
-          <p>A mobile spending tracker that provides a visual representation of one's spendings throughout a month.</p>
-        </div>
-
-        <div class="large-4 medium-4 columns project">
-          <div class="img-wrapper" data-reveal-id="project-konii" class="open-modal">
-            <div class="img-overlay"><p>+</p></div>
-            <img src="img/projects/konii.jpg" alt="Real Estate Platform Konii.de">
-          </div>
-          <h3 data-reveal-id="project-konii" class="open-modal">Konii – The Real Estate Business Club</h3>
-          <p>Konii.de is a real estate business club aimed at real estate professionals in Germany. It features advanced social network features and is mostly based on user-generated content.</p>
-        </div>
-      </div>
-
-
-      <div id="project-fb-graph" class="reveal-modal" data-reveal>
+      <div class="section-wrapper homepage adapt-height" id="homepage" data-menu-offset="-45">
         <div class="row">
-          <div class="large-8 medium-12 columns intro">
-            <h2>VIZEX – Facebook Graph Speech Exploration</h2>
-            <!--<p class="lead">Your couch.  It is mine.</p>-->
+          <div class="large-12 medium-12 columns">
+            <img src="img/profile-pic.jpg" alt="Simon Kreiser" class="profile-picture">
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 medium-12 columns">
+            <h1 class="hl-home tk-adelle-sans">Simon Kreiser</h1>
+            <p>I deeply care about design, the web and technology.</p>
+            <!--<p class="tk-adelle-sans">and take a look. I'm a 27-year old student and I love building things. I studied Design as a Bachelor and right now I'm doing my Master's degree in Human-Computer Interaction. If you want to know more, just scroll down ... </p>-->
+            <a href="#who-am-i" class="button radius round hide-for-small-only">Learn more</a>
+          </div>
+        </div>
+        <!--<div class="icon-box" id="awesome-arrow">
+          <i class="fa fa-arrow-down"></i>
+        </div>-->
+      </div>
+
+
+      <div class="section-wrapper who-am-i statement adapt-height" id="who-am-i">
+        <!--<img src="img/warsaw.jpg" alt="Warsaw" data-bottom-top="top: -400px;" data-top-bottom="top: -100px;" id="parallax-2">-->
+        <div class="row">
+          <div class="large-12 medium-12 columns">
+            <h2>I'm a designer and hacker. <br> I love building products for the digital age.</h2>
+            <span class="divider"></span>
+            <p>For the past year I've been living in Stockholm doing a graduate degree at the Royal Institute of Technology in the field of Human-Computer Interaction. Before, I worked as a designer and front-end developer on a freelance basis in my hometown Cologne. My two main clients were a global PR agency and medium-sized online marketing agency. Since I started developing my first websites when I was 12, my interests have expanded to other areas, such as Interaction Design, Speech and Language Processing and Data Visualization.</p>
+
+            <!--<p>I'm 27-year old, and I’m passionate about technology and design. I’m a Javascript-enthusiast and interested in data visualization and startups. Right now I’m living in Stockholm where I study Human-computer interaction. When I’m not sitting in front of my computer I’m photographing, travelling or enjoying Indian food.</p>-->
+          </div>
+        </div>
+        <!--<i class="fa fa-plane"></i>-->
+      </div>
+
+
+      <div class="section-wrapper about-me professional adapt-height" id="competencies">
+        <div class="row">
+          <div class="large-12 medium-12 columns">
+            <h2>My Competencies</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-3 medium-3 fact columns">
+            <i class="fa fa-users"></i>
+            <h3>User-Centered Design</h3>
+            <p>I love working on prototypes, thinking about information architecture or evaluating the usability of an existing piece of software.</p>
+          </div>
+
+          <div class="large-3 medium-3 fact columns">
+            <i class="fa fa-paint-brush"></i>
+            <h3>Design &amp; Branding</h3>
+            <p>I'm obsessed with details, typography, grids, colors and everything that's related to the visual apperance of a digital brand.</p>
+          </div>
+
+          <div class="large-3 medium-3 fact columns">
+            <i class="fa fa-code"></i>
+            <h3>Web Development</h3>
+            <p>I've got a lot of love for html, CSS and Javascript and have been working with PHP for a while now. Lately I've been experimenting with Python and Node.js.</p>
+          </div>
+
+          <div class="large-3 medium-3 fact columns">
+            <i class="fa fa-money"></i>
+            <h3>Marketing &amp; Entrepreneurship</h3>
+            <p>I know a thing or two about marketing, business development and startups.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="section-wrapper statement">
+        <div class="row">
+          <div class="large-12 medium-12 columns">
+            <h2 class="quote">“Design is not just what it looks like and feels like. Design is how it works.”</h2>
+            <span class="divider"></span>
+            <p>Steve Jobs</p>        
+          </div>
+        </div>
+      </div>
+
+
+      <div class="section-wrapper projects adapt-height" id="projects">
+        <div class="row">
+          <div class="large-12 medium-12 columns">
+            <h2>These are my most recent projects</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-4 medium-4 columns project">
+            <div class="img-wrapper open-modal" data-reveal-id="project-fb-graph">
+              <div class="img-overlay"><p>+</p></div>
+              <img src="img/projects/facebook-graph.jpg" alt="Facebook Graph Visualisation">
+            </div>
+            <h3 data-reveal-id="project-fb-graph" class="open-modal">VIZEX – Facebook Graph Speech Exploration</h3>
             <p>VIZEX is an interactive visualization of a user's Facebook Social Graph. It allows the user to query certain features of the network and be presented with a visual result.</p>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="large-8 medium-12 columns slideshow">
-            <div class="project-slideshow fb-graph">
-              <div><img src="img/projects/fb-graph/1.jpg" alt="Facebook Graph Visualization Screenshot 1"></div>
-              <div><img src="img/projects/fb-graph/2.jpg" alt="Facebook Graph Visualization Screenshot 2"></div>
-              <div><img src="img/projects/fb-graph/3.jpg" alt="Facebook Graph Visualization Screenshot 3"></div>
+          <div class="large-4 medium-4 columns project">
+            <div class="img-wrapper open-modal" data-reveal-id="project-exp-tracker">
+              <div class="img-overlay"><p>+</p></div>
+              <img src="img/projects/expense-tracker.jpg" alt="Expense Tracker">
             </div>
+            <h3 data-reveal-id="project-exp-tracker" class="open-modal">Expense Tracker Mobile App</h3>
+            <p>A mobile spending tracker that provides a visual representation of one's spendings throughout a month.</p>
           </div>
 
-          <div class="large-3 medium-12 columns project-details">
-            <div class="row">
-              <div class="large-12 medium-3 columns">
-                <h4>Languages</h4>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>Javascript</li>
-                  <li>PHP</li>
-                  <li>SQL</li>
-                </ul>
-              </div>
-
-              <div class="large-12 medium-3 columns">
-                <h4>Technologies</h4>
-                <ul>
-                  <li>Google Speech API</li>
-                  <li>wit.ai Natural Language API</li>
-                  <li>Facebook Graph API</li>
-                  <li>HTML5 Canvas</li>
-                  <li>AJAX</li>
-                  <li></li>
-                </ul>
-              </div>
-
-              <div class="large-12 medium-3 columns">
-                <h4>Responsible for</h4>
-                <ul>
-                  <li>Processing of Queries</li>
-                  <li>Facebook API</li>
-                  <li>Backend &amp; MySQL Database</li>
-                </ul>
-              </div>
-
-              <div class="large-12 medium-3 columns">
-                <h4>Links</h4>
-                <p><a href="http://vimeo.com/84522056" target="_blank">Video</a></p>
-              </div>
-
+          <div class="large-4 medium-4 columns project">
+            <div class="img-wrapper open-modal" data-reveal-id="project-konii">
+              <div class="img-overlay"><p>+</p></div>
+              <img src="img/projects/konii.jpg" alt="Real Estate Platform Konii.de">
             </div>
-
-          </div>
-        </div>
-
-        <a class="close-reveal-modal">&#215;</a>
-      </div>
-
-    </div>
-
-
-    <div id="project-exp-tracker" class="reveal-modal" data-reveal>
-        <div class="row">
-          <div class="large-8 medium-12 columns intro">
-            <h2>Expense Tracker</h2>
-            <p>The aim was to design and develop an expense tracking app, which allows users to track the amount of money they spent in a straightforward way. The spendings are grouped in categories and visualized throughout the month.</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-8 medium-12 columns slideshow">
-            <div class="project-slideshow exp-tracker">
-              <div><img src="img/projects/exp-tracker/1.jpg" alt="Expense Tracker Screenshot 1"></div>
-              <div><img src="img/projects/exp-tracker/2.jpg" alt="Expense Tracker Screenshot 2"></div>
-              <div><img src="img/projects/exp-tracker/3.jpg" alt="Expense Tracker Screenshot 3"></div>
-              <div><img src="img/projects/exp-tracker/4.jpg" alt="Expense Tracker Screenshot 4"></div>
-              <div><img src="img/projects/exp-tracker/5.jpg" alt="Expense Tracker Screenshot 5"></div>
-              <div><img src="img/projects/exp-tracker/6.jpg" alt="Expense Tracker Screenshot 6"></div>
-              <div><img src="img/projects/exp-tracker/7.jpg" alt="Expense Tracker Screenshot 7"></div>
-            </div>
-          </div>
-
-          <div class="large-3 medium-12 columns project-details">
-
-            <div class="row">
-              <div class="large-12 medium-3 columns">
-                <h4>Languages</h4>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>Javascript</li>
-                </ul>
-              </div>
-
-              <div class="large-12 medium-3 columns">
-                <h4>Technologies</h4>
-                <ul>
-                  <li>Angular.JS</li>
-                  <li>Zurb Foundation Framework</li>
-                  <li>Ratchet Mobile App Framework</li>
-                  <li>JSON</li>
-                </ul>
-              </div>
-
-              <div class="large-12 medium-3 columns">
-                <h4>Responsible for</h4>
-                <ul>
-                  <li>Visual Design</li>
-                  <li>Interaction Design</li>
-                  <li>Functionality of Feed and Settings</li>
-                </ul>
-              </div>
-
-              <div class="large-12 medium-3 columns">
-                <h4>Links</h4>
-                <p><a href="http://vimeo.com/96205826" target="_blank">Video</a></p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <a class="close-reveal-modal">&#215;</a>
-      </div>
-
-    </div>
-
-
-    <div id="project-konii" class="reveal-modal" data-reveal>
-        <div class="row">
-          <div class="large-8 medium-12 columns intro">
-            <h2>Konii – The Real Estate Business Club</h2>
-            <!--<p class="lead">Your couch.  It is mine.</p>-->
+            <h3 data-reveal-id="project-konii" class="open-modal">Konii – The Real Estate Business Club</h3>
             <p>Konii.de is a real estate business club aimed at real estate professionals in Germany. It features advanced social network features and is mostly based on user-generated content.</p>
           </div>
         </div>
 
+
+        <div id="project-fb-graph" class="reveal-modal" data-reveal>
+          <div class="row">
+            <div class="large-8 medium-12 columns intro">
+              <h2>VIZEX – Facebook Graph Speech Exploration</h2>
+              <!--<p class="lead">Your couch.  It is mine.</p>-->
+              <p class="hide-for-small-only">VIZEX is an interactive visualization of a user's Facebook Social Graph. It allows the user to query certain features of the network and be presented with a visual result.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="large-8 medium-12 columns slideshow">
+              <div class="project-slideshow fb-graph">
+                <div><img src="img/projects/fb-graph/1.jpg" alt="Facebook Graph Visualization Screenshot 1"></div>
+                <div><img src="img/projects/fb-graph/2.jpg" alt="Facebook Graph Visualization Screenshot 2"></div>
+                <div><img src="img/projects/fb-graph/3.jpg" alt="Facebook Graph Visualization Screenshot 3"></div>
+              </div>
+            </div>
+
+            <div class="large-3 medium-12 columns project-details hide-for-small-only">
+              <div class="row">
+                <div class="large-12 medium-3 columns">
+                  <h4>Languages</h4>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>PHP</li>
+                    <li>SQL</li>
+                  </ul>
+                </div>
+
+                <div class="large-12 medium-3 columns">
+                  <h4>Technologies</h4>
+                  <ul>
+                    <li>Google Speech API</li>
+                    <li>wit.ai Natural Language API</li>
+                    <li>Facebook Graph API</li>
+                    <li>HTML5 Canvas</li>
+                    <li>AJAX</li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <div class="large-12 medium-3 columns">
+                  <h4>Responsible for</h4>
+                  <ul>
+                    <li>Processing of Queries</li>
+                    <li>Facebook API</li>
+                    <li>Backend &amp; MySQL Database</li>
+                  </ul>
+                </div>
+
+                <div class="large-12 medium-3 columns">
+                  <h4>Links</h4>
+                  <p><a href="http://vimeo.com/84522056" target="_blank">Video</a></p>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <div id="project-exp-tracker" class="reveal-modal" data-reveal>
+          <div class="row">
+            <div class="large-8 medium-12 columns intro">
+              <h2>Expense Tracker</h2>
+              <p class="hide-for-small-only">The aim was to design and develop an expense tracking app, which allows users to track the amount of money they spent in a straightforward way. The spendings are grouped in categories and visualized throughout the month.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="large-8 medium-12 columns slideshow">
+              <div class="project-slideshow exp-tracker">
+                <div><img src="img/projects/exp-tracker/1.jpg" alt="Expense Tracker Screenshot 1"></div>
+                <div><img src="img/projects/exp-tracker/2.jpg" alt="Expense Tracker Screenshot 2"></div>
+                <div><img src="img/projects/exp-tracker/3.jpg" alt="Expense Tracker Screenshot 3"></div>
+                <div><img src="img/projects/exp-tracker/4.jpg" alt="Expense Tracker Screenshot 4"></div>
+                <div><img src="img/projects/exp-tracker/5.jpg" alt="Expense Tracker Screenshot 5"></div>
+                <div><img src="img/projects/exp-tracker/6.jpg" alt="Expense Tracker Screenshot 6"></div>
+                <div><img src="img/projects/exp-tracker/7.jpg" alt="Expense Tracker Screenshot 7"></div>
+              </div>
+            </div>
+
+            <div class="large-3 medium-12 columns project-details hide-for-small-only">
+
+              <div class="row">
+                <div class="large-12 medium-3 columns">
+                  <h4>Languages</h4>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                  </ul>
+                </div>
+
+                <div class="large-12 medium-3 columns">
+                  <h4>Technologies</h4>
+                  <ul>
+                    <li>Angular.JS</li>
+                    <li>Zurb Foundation Framework</li>
+                    <li>Ratchet Mobile App Framework</li>
+                    <li>JSON</li>
+                  </ul>
+                </div>
+
+                <div class="large-12 medium-3 columns">
+                  <h4>Responsible for</h4>
+                  <ul>
+                    <li>Visual Design</li>
+                    <li>Interaction Design</li>
+                    <li>Functionality of Feed and Settings</li>
+                  </ul>
+                </div>
+
+                <div class="large-12 medium-3 columns">
+                  <h4>Links</h4>
+                  <p><a href="http://vimeo.com/96205826" target="_blank">Video</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <div id="project-konii" class="reveal-modal" data-reveal>
+          <div class="row">
+            <div class="large-8 medium-12 columns intro">
+              <h2>Konii – The Real Estate Business Club</h2>
+              <!--<p class="lead">Your couch.  It is mine.</p>-->
+              <p class="hide-for-small-only">Konii.de is a real estate business club aimed at real estate professionals in Germany. It features advanced social network features and is mostly based on user-generated content.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="large-8 medium-12 columns slideshow">
+              <div class="project-slideshow konii">
+                <div><img src="img/projects/konii/1.jpg" alt="Konii Screenshot 1"></div>
+                <div><img src="img/projects/konii/2.jpg" alt="Konii Screenshot 2"></div>
+                <div><img src="img/projects/konii/3.jpg" alt="Konii Screenshot 3"></div>
+              </div>
+            </div>
+
+            <div class="large-3 medium-12 columns project-details hide-for-small-only">
+              <div class="row">
+                <div class="large-12 medium-3 columns">
+                  <h4>Languages</h4>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>PHP</li>
+                  </ul>
+                </div>
+
+
+                <div class="large-12 medium-3 columns">
+                  <h4>Technologies</h4>
+                  <ul>
+                    <li>Sassy CSS</li>
+                    <li>jQuery</li>
+                  </ul>
+                </div>
+
+                <div class="large-12 medium-3 columns">
+                  <h4>Responsible for</h4>
+                  <ul>
+                    <li>Frontend Develoment (Templates &amp; Interaction)</li>
+                  </ul>
+                </div>
+
+                <div class="large-12 medium-3 columns">
+                  <h4>Links</h4>
+                  <p>
+                    <a href="https://www.konii.de/" target="_blank">konii.de</a>
+                    <br />
+                    <a href="http://id-ea.de/" target="_blank">id-ea.de</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+      </div>
+
+      <div class="section-wrapper statement">
         <div class="row">
-          <div class="large-8 medium-12 columns slideshow">
-            <div class="project-slideshow konii">
-              <div><img src="img/projects/konii/1.jpg" alt="Konii Screenshot 1"></div>
-              <div><img src="img/projects/konii/2.jpg" alt="Konii Screenshot 2"></div>
-              <div><img src="img/projects/konii/3.jpg" alt="Konii Screenshot 3"></div>
-            </div>
+          <div class="large-12 medium-12 columns">
+            <h2 class="quote">“A good designer finds an elegant way to put everything you need on a page. A great designer convinces you half that shit is unnecessary.”</h2>
+            <span class="divider"></span>
+            <p>Mike Monteiro</p>        
           </div>
-
-          <div class="large-3 medium-12 columns project-details">
-            <div class="row">
-              <div class="large-12 medium-3 columns">
-                <h4>Languages</h4>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>Javascript</li>
-                  <li>PHP</li>
-                </ul>
-              </div>
+        </div>
+      </div>
 
 
-              <div class="large-12 medium-3 columns">
-                <h4>Technologies</h4>
-                <ul>
-                  <li>Sassy CSS</li>
-                  <li>jQuery</li>
-                </ul>
-              </div>
-
-              <div class="large-12 medium-3 columns">
-                <h4>Responsible for</h4>
-                <ul>
-                  <li>Interaction Design</li>
-                  <li>Template Development</li>
-                  <li>Frontend Functionality</li>
-                </ul>
-              </div>
-
-              <div class="large-12 medium-3 columns">
-                <h4>Links</h4>
-                <p>
-                  <a href="https://www.konii.de/" target="_blank">konii.de</a>
-                  <br />
-                  <a href="http://id-ea.de/" target="_blank">id-ea.de</a>
-                </p>
-              </div>
-            </div>
+      <div class="section-wrapper about-me personal adapt-height" id="about-me">
+        <div class="row">
+          <div class="large-12 medium-12 columns">
+            <h2>Not fed up yet? Here are some fun facts.</h2>
           </div>
         </div>
 
-        <a class="close-reveal-modal">&#215;</a>
-      </div>
+        <div class="row">
+          <div class="large-3 medium-3 fact columns">
+            <i class="fa fa-globe"></i>
+            <h3>22 countries</h3>
+            <p>I love travelling! I've been to Canada, Russia, the US, Malaysia, Denmark, Sweden, Estonia, Latvia and many many more.</p>
+          </div>
 
-    </div>
+          <div class="large-3 medium-3 fact columns">
+            <i class="fa fa-camera"></i>
+            <h3>12,263 pictures</h3>
+            <p>During my travels I take a lot of pictures and because I support the creative commons movement I offer the best at <a href="https://500px.com/smonusbonus" target="_blank">500px.com</a> for free.</p>
+          </div>
 
+          <div class="large-3 medium-3 fact columns">
+            <i class="fa fa-bicycle"></i>
+            <h3>123,274 km</h3>
+            <p>Okay, I made up this number. But I really love biking and I take my bike wherever I go.</p>
+          </div>
 
-    <div class="section-wrapper statement">
-      <div class="row">
-        <div class="large-12 medium-12 columns">
-          <h2 class="quote">“A good designer finds an elegant way to put everything you need on a page. A great designer convinces you half that shit is unnecessary.”</h2>
-          <span class="divider"></span>
-          <p>Mike Monteiro</p>        
+          <div class="large-3 medium-3 fact columns">
+            <i class="fa fa-futbol-o"></i>
+            <h3>231 matches</h3>
+            <p>That's how often I supported my favourite football club live in the stadium.</p>
+          </div>
         </div>
       </div>
-    </div>
 
 
-    <div class="section-wrapper about-me personal adapt-height" id="about-me">
-      <div class="row">
-        <div class="large-12 medium-12 columns">
-          <h2>Not fed up yet? Here are some fun facts.</h2>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="large-3 medium-3 fact columns">
-          <i class="fa fa-globe"></i>
-          <h3>22 countries</h3>
-          <p>I love travelling! I've been to Canada, Russia, the US, Malaysia, Denmark, Sweden, Estonia, Latvia and many many more.</p>
+      <div class="section-wrapper adapt-height contact" id="contact">
+        <div class="row intro">
+          <div class="send-email-icon">
+            <i class="fa fa-paper-plane"></i>
+          </div>
+          <h2>Let's keep in touch!</h2>
+          <p>Whether you want to know more about me or the projects I worked on, I'm looking forward to your message.</p>
         </div>
 
-        <div class="large-3 medium-3 fact columns">
-          <i class="fa fa-camera"></i>
-          <h3>12,263 pictures</h3>
-          <p>During my travels I take a lot of pictures and because I support the creative commons movement I offer the best at <a href="https://500px.com/smonusbonus" targe="_blank">500px.com</a> for free.</p>
-        </div>
-
-        <div class="large-3 medium-3 fact columns">
-          <i class="fa fa-bicycle"></i>
-          <h3>123,274 km</h3>
-          <p>Okay, I made up this number. But I really love biking and I take my bike wherever I go.</p>
-        </div>
-
-        <div class="large-3 medium-3 fact columns">
-          <i class="fa fa-futbol-o"></i>
-          <h3>231 matches</h3>
-          <p>That's how often I supported my favourite football club live in the stadium.</p>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="section-wrapper adapt-height contact" id="contact">
-      <div class="row intro">
-        <div class="send-email-icon">
-          <i class="fa fa-paper-plane"></i>
-        </div>
-        <h2>Let's keep in touch!</h2>
-        <p>Whether you want to know more about me personally or the projects I worked on, I'm looking forward to hear from you.</p>
-      </div>
-
-      <div class="row">
-        <div class="large-12 medium-12 columns">
-          <span class="email-field" id="email-field">simokrei@gmail.com</span>
+        <div class="row">
+          <div class="large-12 medium-12 columns">
+            <span class="email-field" id="email-field">simokrei@gmail.com</span>
+          </div>
         </div>
       </div>
 
       <div class="social-media">
         <div class="row">
-          <div class="large-8 medium-8 large-offset-2 medium-offset-2 columns links">
+          <div class="large-8 medium-8 small-12 large-offset-2 medium-offset-2 small-offset-0 columns links">
             <p>Find me online:</p>
             <ul>
               <li>
