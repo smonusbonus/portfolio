@@ -64,7 +64,7 @@ $(window).on("scroll", function() {
     sectionsArray = calcSectionsHeight($("#skrollr-nav"));
     activeSection = defineActiveSection(sectionsArray, scrollTop);
     changeNavActive($('a[href$="' + activeSection + '"]'));
-  }, 50);
+  }, 100);
 });
 
 
