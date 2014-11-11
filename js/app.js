@@ -16,7 +16,7 @@ var s = skrollr.init(),
 // init skrollr menu
 skrollr.menu.init(s);
 
-// initially set proper box height and fit text
+// initially set proper box height
 adaptBoxHeight(elements, winHeight);
 
 
@@ -32,12 +32,13 @@ adaptBoxHeight(elements, winHeight);
 var firstTimeModal = true;
 $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
   var modal = $(this);
+  console.log(modal);
   //console.log(this);
   //$(".project-fb-graph-slideshow").slickSetOption({dots: true});
-  if(firstTimeModal === true) {
-    $('.project-fb-graph-slideshow').slick({dots: true});
-  }
-  firstTimeModal = false;
+  //if(firstTimeModal === true) {
+  $('#' + modal[0]['id'] + ' .project-slideshow').slick({dots: true});
+  //}
+  //firstTimeModal = false;
 });
 
 
@@ -105,7 +106,14 @@ function defineActiveSection(sectionsArray, currentScrollHeight) {
     index++;
   }
 
+  updateUrl(activeId);
   return activeId;
+}
+
+function updateUrl(id) {
+  var stateObj = { stateId: id };
+  history.pushState(stateObj, '', id);
+  //window.location = id;
 }
 
 function checkTobBarStatus(scrollTop) {
@@ -158,8 +166,6 @@ function calcSectionsHeight(nav) {
 
   idArray.push('#homepage');
   posArray.push(0.0);
-
-  console.log();
 
   $(nav).children('li').each(function() {
     elmId = this.children[0].hash;
