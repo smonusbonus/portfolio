@@ -2,11 +2,6 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-// init slick carousel
-/*$(document).ready(function() {
-  $('.project-fb-graph-slideshow').slick();
-});*/
-
 // global variables
 var s = skrollr.init(),
   winHeight = $(window).height(),
@@ -29,7 +24,7 @@ adaptBoxHeight(elements, winHeight);
 //var firstTimeModal = true;
 $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
   var modal = $(this);
-  console.log(modal);
+  //console.log(modal);
   //console.log(this);
   //$(".project-fb-graph-slideshow").slickSetOption({dots: true});
   //if(firstTimeModal === true) {
@@ -90,6 +85,7 @@ function changeNavActive(clickedElm) {
   $(clickedElm).parents("li").addClass("active");
 }
 
+
 function defineActiveSection(sectionsArray, currentScrollHeight) {
   var index = 0,
     activeId = '';
@@ -107,6 +103,7 @@ function defineActiveSection(sectionsArray, currentScrollHeight) {
   return activeId;
 }
 
+
 function updateUrl(id) {
   var stateObj = { stateId: id };
   try {
@@ -117,6 +114,7 @@ function updateUrl(id) {
     // Handle error(s) here
   }
 }
+
 
 function checkTobBarStatus(scrollTop) {
   var topBar = $(".top-bar");
@@ -131,31 +129,32 @@ function checkTobBarStatus(scrollTop) {
 // make sure boxes have min-height of browser window
 function adaptBoxHeight(elements, winHeight) {
 
-  if(winHeight < 500) { winHeight = 500; } 
+  if(winHeight < 500) { 
+    winHeight = 500; 
+  } 
 
   $(elements).css("min-height", winHeight);
   $(elements[0]).css("min-height", winHeight - 45);
 
-  //s.refresh($("#parallax-1"), $("#parallax-2"));
 }
 
 // http://stackoverflow.com/questions/11128130/select-text-in-javascript
 function selectText(element) {
-    var doc = document, 
-      text = doc.getElementById(element), 
-      range, selection;
+  var doc = document, 
+    text = doc.getElementById(element), 
+    range, selection;
 
-    if (doc.body.createTextRange) {
-        range = document.body.createTextRange();
-        range.moveToElementText(text);
-        range.select();
-    } else if (window.getSelection) {
-        selection = window.getSelection();        
-        range = document.createRange();
-        range.selectNodeContents(text);
-        selection.removeAllRanges();
-        selection.addRange(range);
-    }
+  if (doc.body.createTextRange) {
+      range = document.body.createTextRange();
+      range.moveToElementText(text);
+      range.select();
+  } else if (window.getSelection) {
+      selection = window.getSelection();        
+      range = document.createRange();
+      range.selectNodeContents(text);
+      selection.removeAllRanges();
+      selection.addRange(range);
+  }
 }
 
 
@@ -181,5 +180,3 @@ function calcSectionsHeight(nav) {
 
   return sectionsArray;
 }
-
-
