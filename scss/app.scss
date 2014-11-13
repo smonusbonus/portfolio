@@ -249,13 +249,14 @@ p a {
 .homepage {
   background-color: #7BB8BF;
   padding-top: 90px;
+  min-height: 900px;
 
   h1 {
     font-size: 70px;
     font-weight: 600;
-    //text-transform: uppercase;
     color: #FFF;
     text-align: center;
+    opacity: 0;
 
     /* Define mobile styles */
     @media only screen and (max-width: 40em) { 
@@ -269,6 +270,7 @@ p a {
     font-weight: 300;
     color: #FFF;
     text-align: center;
+    opacity: 0;
 
     @media only screen and (max-width: 40em) {
       font-size: 16px;
@@ -281,6 +283,7 @@ p a {
     border-radius: 100px;
     margin: 10px auto 10px;
     display: block;
+    opacity: 0;
   }
 
   .button {
@@ -291,6 +294,7 @@ p a {
     width: 170px;
     display: block;
     margin: 40px auto 0;
+    opacity: 0;
 
     &:hover {
       background-color: #FF9B8B;
@@ -312,6 +316,26 @@ p a {
     margin: 0 auto;
     width: 50px;
     display: block;
+  }
+}
+
+// styles for when typekit font is not active
+.wf-inactive .homepage {
+
+  h1 {
+    opacity: 1.0;
+  }
+
+  p {
+    opacity: 1.0;
+  }
+
+  .profile-picture {
+    opacity: 1.0;
+  }
+
+  .button {
+    opacity: 1.0;
   }
 }
 

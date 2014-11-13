@@ -1,19 +1,51 @@
-// Foundation JavaScript
-// Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();
-
 // global variables
 var s = skrollr.init(),
   winHeight = $(window).height(),
   elements = $(".adapt-height"),
   timeoutID;
 
-// init skrollr menu
-skrollr.menu.init(s);
-
 // initially set proper box height
 adaptBoxHeight(elements, winHeight);
 
+$(document).on('ready', function() {
+
+  //console.log($('#headline-fade'));
+  window.setTimeout(function() {
+    $('#headline-fade').fadeTo(500, 1);
+    $('#paragraph-fade').fadeTo(500, 1);
+    $('#button-fade').fadeTo(500, 1, function() {
+      $('#image-fade').fadeTo(700, 1);
+    });
+  }, 200);
+  
+
+  
+  /*try {
+    Typekit.load({
+      loading: function() {
+        // JavaScript to execute when fonts start loading
+        console.log('loading');
+      },
+      active: function() {
+        // JavaScript to execute when fonts become active
+        //$('#headline-fade').fadeTo(600, 1);
+        console.log('active');
+      },
+      inactive: function() {
+        // JavaScript to execute when fonts become inactive
+      }
+    })
+  } catch(e) {
+    console.log(e);
+  }*/
+});
+
+// Foundation JavaScript
+// Documentation can be found at: http://foundation.zurb.com/docs
+$(document).foundation();
+
+// init skrollr menu
+skrollr.menu.init(s);
 
 
 /*  --------------------
@@ -75,7 +107,6 @@ $("#email-field").on("click", function(e) {
 });
 
 
-
 /*  --------------------
     function definitions
     --------------------
@@ -134,7 +165,9 @@ function adaptBoxHeight(elements, winHeight) {
   } 
 
   $(elements).css("min-height", winHeight);
-  $(elements[0]).css("min-height", winHeight - 45);
+  window.setTimeout(function() {
+    $(elements[0]).css("min-height", winHeight - 45);
+  }, 300);
 
 }
 
