@@ -54,7 +54,7 @@ $dark-font-color: #293D3F;
 
 body {
   background: #7BB8BF;
-  margin-bottom: -60px;
+  //margin-bottom: -60px;
 }
 
 h1, h2 {
@@ -485,7 +485,7 @@ p a {
 .contact {
   background-color: #6B9FA5;
   color: #FFF;
-  margin-bottom: -60px;
+  //margin-bottom: -60px;
 
   .intro {
     margin-bottom: 50px;
@@ -544,7 +544,6 @@ p a {
   background-color: rgba(40, 69, 73, 0.97);
   padding: 18px 0 0 0;
   position: relative;
-  top: 0;
 
   @media only screen and (max-width: 40em) {
     height: 160px;

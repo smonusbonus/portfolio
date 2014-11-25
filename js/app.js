@@ -1,51 +1,37 @@
 // global variables
-var s = skrollr.init(),
-  winHeight = $(window).height(),
+var winHeight = $(window).height(),
   elements = $(".adapt-height"),
   timeoutID;
 
-// initially set proper box height
-adaptBoxHeight(elements, winHeight);
-
 $(document).on('ready', function() {
 
-  //console.log($('#headline-fade'));
+  // initially set proper box height
+  window.setTimeout(function() {
+    adaptBoxHeight(elements, winHeight);
+  }, 0);
+
+  // Foundation JavaScript
+  // Documentation can be found at: http://foundation.zurb.com/docs
+  window.setTimeout(function() {
+    $(document).foundation();
+  }, 0);
+
+  // init skrollr
+  window.setTimeout(function() {
+    var s = skrollr.init();
+    skrollr.menu.init(s);
+  }, 0);
+
+
   window.setTimeout(function() {
     $('#headline-fade').fadeTo(500, 1);
     $('#paragraph-fade').fadeTo(500, 1);
     $('#button-fade').fadeTo(500, 1, function() {
       $('#image-fade').fadeTo(700, 1);
     });
-  }, 200);
-  
+  }, 0);
 
-  
-  /*try {
-    Typekit.load({
-      loading: function() {
-        // JavaScript to execute when fonts start loading
-        console.log('loading');
-      },
-      active: function() {
-        // JavaScript to execute when fonts become active
-        //$('#headline-fade').fadeTo(600, 1);
-        console.log('active');
-      },
-      inactive: function() {
-        // JavaScript to execute when fonts become inactive
-      }
-    })
-  } catch(e) {
-    console.log(e);
-  }*/
 });
-
-// Foundation JavaScript
-// Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();
-
-// init skrollr menu
-skrollr.menu.init(s);
 
 
 /*  --------------------
@@ -69,8 +55,13 @@ $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
 // if window is resized update winHeight variable and 
 // adapt min-height for boxes
 $(window).on("resize", function() {
-  winHeight = $(window).height();
-  adaptBoxHeight(elements, winHeight);
+
+  window.clearTimeout(timeoutID);
+  timeoutID = window.setTimeout(function() {
+    winHeight = $(window).height();
+    adaptBoxHeight(elements, winHeight);
+  }, 30);
+
 });
 
 // when user scrolls
@@ -164,10 +155,11 @@ function adaptBoxHeight(elements, winHeight) {
     winHeight = 500; 
   } 
 
+  //console.log(elements);
+
   $(elements).css("min-height", winHeight);
-  window.setTimeout(function() {
-    $(elements[0]).css("min-height", winHeight - 45);
-  }, 300);
+  $(elements[0]).css("min-height", winHeight - 45); // home screen smaller because of main nav
+  $(elements[5]).css("min-height", winHeight - 63); // social media smaller because of footer
 
 }
 
