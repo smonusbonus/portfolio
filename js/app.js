@@ -3,17 +3,15 @@ var winHeight = $(window).height(),
   elements = $(".adapt-height"),
   timeoutID;
 
+// Foundation JavaScript
+// Documentation can be found at: http://foundation.zurb.com/docs
+$(document).foundation();  
+
 $(document).on('ready', function() {
 
   // initially set proper box height
   window.setTimeout(function() {
     adaptBoxHeight(elements, winHeight);
-  }, 0);
-
-  // Foundation JavaScript
-  // Documentation can be found at: http://foundation.zurb.com/docs
-  window.setTimeout(function() {
-    $(document).foundation();
   }, 0);
 
   // init skrollr
@@ -42,13 +40,7 @@ $(document).on('ready', function() {
 //var firstTimeModal = true;
 $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
   var modal = $(this);
-  //console.log(modal);
-  //console.log(this);
-  //$(".project-fb-graph-slideshow").slickSetOption({dots: true});
-  //if(firstTimeModal === true) {
   $('#' + modal[0]['id'] + ' .project-slideshow').slick({dots: true, lazyLoad: 'ondemand'});
-  //}
-  //firstTimeModal = false;
 });
 
 
