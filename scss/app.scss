@@ -203,21 +203,18 @@ p a {
       line-height: 25px;
       color: rgb(255, 255, 255);
       transition: color 1.0s;
-      //border-top: 3px solid transparent;
     }
 
     ul li.active:not(.has-form) a:not(.button) {
       background: transparent;
       font-weight: 600;
       line-height: 25px;
-      //border-top: 3px solid #FFF;
     }
 
     ul li a:hover,
     ul li.active a:hover,
     li.active:not(.has-form) a:not(.button):hover {
       color: $soft-red-rgb;
-      //border-top: 3px solid #FFF;
     }
   }
 
@@ -243,7 +240,7 @@ p a {
 
   @media only screen and (max-width: 40em) {
     padding: 60px 0 35px;
-  } 
+  }
 }
 
 .homepage {
@@ -259,9 +256,9 @@ p a {
     opacity: 0;
 
     /* Define mobile styles */
-    @media only screen and (max-width: 40em) { 
+    @media only screen and (max-width: 40em) {
       font-size: 40px;
-    } 
+    }
 
   }
 
@@ -274,7 +271,7 @@ p a {
 
     @media only screen and (max-width: 40em) {
       font-size: 16px;
-    } 
+    }
   }
 
   .profile-picture {
@@ -357,7 +354,7 @@ p a {
 
     @media only screen and (max-width: 40em) {
       margin-bottom: 50px;
-    } 
+    }
 
     h3 {
       text-align: center;
@@ -367,7 +364,7 @@ p a {
 
       @media only screen and (max-width: 40em) {
         font-size: 25px;
-      } 
+      }
     }
 
     i {
@@ -382,7 +379,7 @@ p a {
 
       @media only screen and (max-width: 40em) {
         font-size: 16px;
-      } 
+      }
     }
   }
 }
@@ -394,7 +391,7 @@ p a {
 
   @media only screen and (max-width: 40em) {
     padding: 70px 0 60px;
-  } 
+  }
 
   .divider {
     width: 10%;
@@ -405,7 +402,7 @@ p a {
 
     @media only screen and (max-width: 40em) {
       width: 25%;
-    } 
+    }
   }
 
   h2 {
@@ -417,7 +414,7 @@ p a {
 
     @media only screen and (max-width: 40em) {
       font-size: 24px;
-    } 
+    }
   }
 
   p {
@@ -426,7 +423,7 @@ p a {
 
     @media only screen and (max-width: 40em) {
       font-size: 16px;
-    } 
+    }
   }
 }
 
@@ -435,8 +432,11 @@ p a {
     margin: 0 0 60px 0;
   }
 
-  .project {
+  .projects-row {
+    margin-bottom: 30px;
+  }
 
+  .project {
     @media only screen and (max-width: 40em) {
       margin-bottom: 50px;
     }
@@ -476,7 +476,7 @@ p a {
       cursor: pointer;
 
       &:hover {
-        
+
       }
     }
   }
