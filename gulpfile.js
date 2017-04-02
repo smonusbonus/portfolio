@@ -6,11 +6,11 @@ gulp.task('default', function() {
   // place code for your default task here
 
   var opts = {
-    comments: true, 
+    comments: true,
     spare: true
   };
 
-  gulp.src('src/index.html')
+  gulp.src('src/**/*.html')
     .pipe(minifyHTML(opts))
     .pipe(gulp.dest('./'))
 });
