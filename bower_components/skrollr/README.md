@@ -1,6 +1,6 @@
 [![Build Status](https://secure.travis-ci.org/Prinzhorn/skrollr.png)](http://travis-ci.org/Prinzhorn/skrollr)
 
-skrollr 0.6.27
+skrollr 0.6.30
 ==============
 
 Stand-alone **parallax scrolling** JavaScript library for **mobile (Android, iOS, etc.) and desktop** in about 12k minified.
@@ -150,6 +150,8 @@ Starting with skrollr 0.6.0 there's just one thing you need to do: Include an el
 
 Or to put it differently: On mobile the `skrollr-body` element is moved using CSS transforms. You can't have `position:fixed` or `background-attachment:fixed` inside elements which use CSS transforms as per CSS spec (http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/). That's why those elements need to be **outside** of the `skrollr-body` element.
 
+The `skrollr-body` element might be configured within the [init-options](#skrollrinitoptions).
+
 AMD
 ---
 
@@ -192,9 +194,9 @@ The syntax is `data-[offset]-(viewport-anchor)-[element-anchor]`, where `offset`
 * `data-center-center` = `data-0-center-center`: When the element is at the center of the viewport.
 * `data-bottom-center` = `data-0-bottom-center`: When the element's center is at the bottom of the viewport, thus the upper half of the element is visible.
 
-By default the element is the element where the key frames are defined on (self), but can be any element on the page. You can optionally specify which element you want by using the `data-anchor-target` and any CSS selector. The first element on the page matching the selector will be used. `data-anchor-target` requires IE 8 or greater.
+By default the keyframes are triggered by the position of the element where the keyframes are described.  However there are times when the position of a second element should trigger the first element's keyframes.  The  `data-anchor-target` attribute can be used in these cases.  The `data-anchor-target` attribute accepts any CSS selector and the position of the first element on the page matching the selector will be used to trigger keyframes on the element where the attribute is defined. `data-anchor-target` requires IE 8 or greater.
 
-Examples: `data-anchor-target="#foo"` or `data-anchor-target=".bar:not(.bacon) ~ span > a[href]"`
+Examples: `<div `data-anchor-target="#foo"`>`  will have it's keyframes tiggered by  the position of the `#foo element`.  Any CSS selector can be used, i.e  `data-anchor-target=".bar:not(.bacon) ~ span > a[href]"`
 
 **Note**: If you need to support IE 7, then you may only use IDs as `anchor-target`s, i.e. `#foo`. The IE plugin maps `querySelector` to `getElementById`.
 
@@ -219,7 +221,7 @@ Check out the [skrollr-menu](https://github.com/Prinzhorn/skrollr-menu) plugin.
 Working with constants
 -----
 
-I was lying to you. The syntax for absolute mode is not `data-[offset]-[anchor]` and for relative mode it's not `data-[offset]-(viewport-anchor)-[element-anchor]`. In both cases, `offset` can be preceded by a constant which can be passed to the `ìnit` method. The name of the constant needs to be preceded with an underscore.
+I was lying to you. The syntax for absolute mode is not `data-[offset]-[anchor]` and for relative mode it's not `data-[offset]-(viewport-anchor)-[element-anchor]`. In both cases, `offset` can be preceded by a constant which can be passed to the `init` method. The name of the constant needs to be preceded with an underscore.
 
 Example:
 
@@ -390,6 +392,10 @@ The amount of deceleration for momentum scrolling on mobile devices. This option
 
 Set it to `1` to disable momentum scrolling.
 
+### skrollrBody='skrollr-body'
+
+This option allows you to override the default id-selector used for supporting mobile browsers. It might come in handy when the element in question already has a assigned id or if you would like to define more then one skrollrBody depending on preceding JavaScript-logic.
+
 ### edgeStrategy='set'
 
 This option specifies how to handle animations when the scroll position is outside the range on the keyframes (i.e. before the first or after the last keyframe).
@@ -527,6 +533,20 @@ skrollr ships with some built in functions:
 * sqrt: Square root. Starts fast, slows down at the end.
 * outCubic
 * bounce: Bounces like a ball. See https://www.desmos.com/calculator/tbr20s8vd2 for a graphical representation.
+
+**Custom easing**
+
+* Use [this](http://www.timotheegroleau.com/Flash/experiments/easing_function_generator.htm) generator
+* Insert the given polynomial coeficients instead of t, t2, t3, t4 and t5
+```
+t5*(p*p*p*p*p) + t4*(p*p*p*p) + t3*(p*p*p) + t2*(p*p) + t*p
+```
+Example shown with the values for easeOutElasticBig
+```
+easeOutElasticBig: function(p) {
+  return 56*(p*p*p*p*p) - 175*(p*p*p*p) + 200*(p*p*p) - 100*(p*p) + 20*p;
+}
+```
 
 skrollr.get()
 -----
