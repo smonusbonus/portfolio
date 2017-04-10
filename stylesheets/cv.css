@@ -79,4 +79,8 @@ td, th {
   a {
     color: #606c76;
   }
+
+  .header-row {
+    margin-bottom: 5em;
+  }
 }
