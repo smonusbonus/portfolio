@@ -1,5 +1,5 @@
 @import "settings";
-@import "foundation";
+@import "../bower_components/foundation/scss/foundation";
 
 // Or selectively include components
 // @import
@@ -336,6 +336,10 @@ p a {
   }
 }
 
+.who-am-i a {
+  color: $dark-font-color;
+}
+
 .about-me {
   h2 {
     text-align: center;
@@ -346,17 +350,6 @@ p a {
     @media only screen and (max-width: 40em) {
       font-size: 30px;
     }
-  }
-
-  .cv-row {
-    margin-top: 20px;
-    text-align: center;
-    opacity: 0.5;
-    transition: all 0.3s;
-  }
-
-  .cv-row:hover {
-    opacity: 1.0;
   }
 
   .fact {
