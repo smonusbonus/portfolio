@@ -6722,8 +6722,8 @@ p a {
       .homepage p {
         font-size: 16px; } }
   .homepage .profile-picture {
-    width: 170px;
-    height: 170px;
+    width: 200px;
+    height: 200px;
     border-radius: 100px;
     margin: 10px auto 10px;
     display: block;
