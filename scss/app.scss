@@ -520,18 +520,8 @@ p a {
   }
 
   .links {
-    text-align: center;
-  }
-
-  p {
-    float: left;
-    margin: 0 20px 0 0;
-
-    @media only screen and (max-width: 40em) {
-      float: none;
-      text-align: center;
-      margin: 0 0 10px 0;
-    }
+    display: flex;
+    justify-content: center;
   }
 
   ul li {
@@ -561,5 +551,11 @@ p a {
       color: $call-to-action-color;
       }
     }
+  }
+}
+
+.find-me-online-label {
+  @media only screen and (max-width: 40em) {
+    display: none;
   }
 }

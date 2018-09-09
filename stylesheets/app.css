@@ -6889,15 +6889,8 @@ p a {
     .social-media {
       height: 160px; } }
   .social-media .links {
-    text-align: center; }
-  .social-media p {
-    float: left;
-    margin: 0 20px 0 0; }
-    @media only screen and (max-width: 40em) {
-      .social-media p {
-        float: none;
-        text-align: center;
-        margin: 0 0 10px 0; } }
+    display: flex;
+    justify-content: center; }
   .social-media ul li {
     list-style-type: none;
     float: left;
@@ -6915,5 +6908,9 @@ p a {
       pointer: cursor; }
       .social-media ul li:hover a {
         color: #DCC48E; }
+
+@media only screen and (max-width: 40em) {
+  .find-me-online-label {
+    display: none; } }
 
 /*# sourceMappingURL=app.css.map */
