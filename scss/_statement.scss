@@ -1,13 +1,5 @@
 .statement {
-  overflow: hidden;
   background-color: $background-color-soft;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-  @media only screen and (max-width: 40em) {
-    padding: 70px 0 60px;
-  }
 }
 
 .statement__content-wrapper {
@@ -40,10 +32,10 @@
 }
 
 .statement__divider {
+  background-color: $text-color;
+  display: block;
   width: 10%;
   height: 5px;
-  background-color: #293d3f;
-  display: block;
   margin: 30px 0 25px;
 
   @media only screen and (max-width: 40em) {

@@ -146,6 +146,9 @@ p a {
 }
 
 .section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   min-height: 900px;
   height: 100vh;

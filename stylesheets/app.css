@@ -403,10 +403,7 @@ template {
   display: none; }
 
 .homepage {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center; }
+  text-align: center; }
 
 .homepage__profile-picture {
   width: 200px;
@@ -500,14 +497,7 @@ template {
   color: #DCC48E; }
 
 .statement {
-  overflow: hidden;
-  background-color: #f5f0f0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column; }
-  @media only screen and (max-width: 40em) {
-    .statement {
-      padding: 70px 0 60px; } }
+  background-color: #f5f0f0; }
 
 .statement__content-wrapper {
   width: 70%;
@@ -534,10 +524,10 @@ template {
       font-size: 16px; } }
 
 .statement__divider {
+  background-color: #444;
+  display: block;
   width: 10%;
   height: 5px;
-  background-color: #293d3f;
-  display: block;
   margin: 30px 0 25px; }
   @media only screen and (max-width: 40em) {
     .statement__divider {
@@ -626,6 +616,9 @@ p a {
   color: #FFF; }
 
 .section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   min-height: 900px;
   height: 100vh; }
