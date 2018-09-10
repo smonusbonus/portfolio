@@ -1,0 +1,57 @@
+.top-bar {
+  background: transparent;
+  display: flex;
+  height: 47px;
+  justify-content: space-between;
+  position: fixed;
+  transition: background-color 0.7s;
+  width: 100%;
+  z-index: 1;
+
+  &:hover,
+  &.scrolled {
+    background-color: $background-color-soft;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+
+    .top-bar__link--title {
+      opacity: 1.0;
+    }
+  }
+}
+
+.top-bar__link-list {
+  margin: 10px 0;
+}
+
+.top-bar__link,
+.top-bar__link--title {
+  float: left;
+  list-style-type: none;
+  padding: 0 15px;
+  line-height: 1.5;
+}
+
+.top-bar__link--title {
+  opacity: 0.0;
+  transition: opacity 0.7s;
+}
+
+.top-bar__link-anchor {
+  color: $text-color;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+  padding: 0;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.top-bar__link-anchor.active {
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.top-bar__link-anchor:hover,
+.top-bar__link.active .top-bar__link-anchor {
+  color: $call-to-action-color;
+}

@@ -1,44 +1,4 @@
-@import "settings";
-@import "colors";
-@import "../bower_components/foundation/scss/foundation";
-
-// Or selectively include components
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switches",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
+@import "../node_modules/normalize-scss/sass/normalize/import-now";
 
 // apply box-sizing: border-box to everything
 html {
@@ -47,6 +7,10 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+@import "settings";
+@import "colors";
+@import "top-bar";
 
 @mixin vertical-align {
   position: relative;
@@ -175,63 +139,6 @@ p a {
   color: $white;
 }
 
-.top-bar {
-  background-color: transparent;
-  transition: background-color 0.7s;
-  height: 47px;
-
-  .name h1 a {
-    color: $text-color;
-    opacity: 0.0;
-    font-size: 15px;
-    font-weight: 600;
-    transition: opacity 0.7s;
-  }
-
-  .top-bar-section {
-    ul li {
-      background: transparent;
-      padding: 10px 15px 0 15px;
-    }
-
-    ul li:not(.has-form) a:not(.button) {
-      background: transparent;
-      font-size: 15px;
-      font-weight: 300;
-      padding: 0;
-      line-height: 25px;
-      color: $text-color;
-      transition: color 1.0s;
-    }
-
-    ul li.active:not(.has-form) a:not(.button) {
-      background: transparent;
-      font-weight: 600;
-      line-height: 25px;
-    }
-
-    ul li a:hover,
-    ul li.active a:hover,
-    li.active:not(.has-form) a:not(.button):hover {
-      color: $call-to-action-color;
-    }
-  }
-
-  &:hover,
-  &.scrolled {
-    background-color: $background-color-soft;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-
-    li.active:not(.has-form) a:not(.button) {
-      color: $call-to-action-color;
-    }
-
-    .name h1 a {
-      opacity: 1.0;
-    }
-  }
-}
-
 .section-wrapper {
   position: relative;
   padding: 130px 0 100px;
@@ -262,7 +169,6 @@ p a {
     @media only screen and (max-width: 40em) {
       font-size: 40px;
     }
-
   }
 
   p {
