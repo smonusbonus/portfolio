@@ -40,6 +40,14 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+// apply box-sizing: border-box to everything
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 @mixin vertical-align {
   position: relative;
   top: 50%;
@@ -225,19 +233,23 @@ p a {
 }
 
 .section-wrapper {
-  box-sizing: border-box;
   position: relative;
   padding: 130px 0 100px;
+  min-height: 900px;
+  height: 100vh;
 
   @media only screen and (max-width: 40em) {
     padding: 60px 0 35px;
   }
 }
 
+.section-wrapper.projects {
+  height: auto;
+}
+
 .homepage {
   background-color: $background-color;
   padding-top: 90px;
-  min-height: 900px;
 
   h1 {
     font-size: 70px;

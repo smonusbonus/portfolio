@@ -6577,6 +6577,12 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
   background: #ebd8da; }
 
@@ -6690,17 +6696,20 @@ p a {
       opacity: 1.0; }
 
 .section-wrapper {
-  box-sizing: border-box;
   position: relative;
-  padding: 130px 0 100px; }
+  padding: 130px 0 100px;
+  min-height: 900px;
+  height: 100vh; }
   @media only screen and (max-width: 40em) {
     .section-wrapper {
       padding: 60px 0 35px; } }
 
+.section-wrapper.projects {
+  height: auto; }
+
 .homepage {
   background-color: #ebd8da;
-  padding-top: 90px;
-  min-height: 900px; }
+  padding-top: 90px; }
   .homepage h1 {
     font-size: 70px;
     font-weight: 600;
