@@ -402,7 +402,42 @@ template {
 [hidden] {
   display: none; }
 
-.button {
+.homepage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center; }
+
+.homepage__profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin: -70px auto 20px;
+  display: block;
+  opacity: 0; }
+
+.homepage__headline {
+  font-family: "adelle-sans", sans-serif;
+  font-size: 70px;
+  font-weight: 600;
+  color: #444;
+  opacity: 0;
+  /* Define mobile styles */ }
+  @media only screen and (max-width: 40em) {
+    .homepage__headline {
+      font-size: 40px; } }
+
+.homepage__description {
+  color: #444;
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0;
+  margin-bottom: 40px; }
+  @media only screen and (max-width: 40em) {
+    .homepage__description {
+      font-size: 16px; } }
+
+.homepage__learn-more-button {
   background-color: #DCC48E;
   border-radius: 30px;
   font-weight: 400;
@@ -415,7 +450,7 @@ template {
   padding: 15px 20px;
   margin: 0 auto;
   width: 170px; }
-  .button:hover {
+  .homepage__learn-more-button:hover {
     background-color: #c6ac70; }
 
 .top-bar {
@@ -548,7 +583,6 @@ p a {
 
 .section-wrapper {
   position: relative;
-  padding: 130px 0 100px;
   min-height: 900px;
   height: 100vh; }
   @media only screen and (max-width: 40em) {
@@ -557,36 +591,6 @@ p a {
 
 .section-wrapper.projects {
   height: auto; }
-
-.homepage {
-  background-color: #ebd8da;
-  padding-top: 90px; }
-  .homepage h1 {
-    font-size: 70px;
-    font-weight: 600;
-    color: #444;
-    text-align: center;
-    opacity: 0;
-    /* Define mobile styles */ }
-    @media only screen and (max-width: 40em) {
-      .homepage h1 {
-        font-size: 40px; } }
-  .homepage p {
-    font-size: 20px;
-    font-weight: 300;
-    color: #444;
-    text-align: center;
-    opacity: 0; }
-    @media only screen and (max-width: 40em) {
-      .homepage p {
-        font-size: 16px; } }
-  .homepage .profile-picture {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    margin: 10px auto 10px;
-    display: block;
-    opacity: 0; }
 
 .wf-inactive .homepage h1 {
   opacity: 1.0; }

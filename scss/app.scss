@@ -5,7 +5,7 @@
 @import "colors";
 
 // components
-@import "buttons";
+@import "homepage";
 @import "top-bar";
 
 // apply box-sizing: border-box to everything
@@ -146,7 +146,6 @@ p a {
 
 .section-wrapper {
   position: relative;
-  padding: 130px 0 100px;
   min-height: 900px;
   height: 100vh;
 
@@ -157,45 +156,6 @@ p a {
 
 .section-wrapper.projects {
   height: auto;
-}
-
-.homepage {
-  background-color: $background-color;
-  padding-top: 90px;
-
-  h1 {
-    font-size: 70px;
-    font-weight: 600;
-    color: $text-color;
-    text-align: center;
-    opacity: 0;
-
-    /* Define mobile styles */
-    @media only screen and (max-width: 40em) {
-      font-size: 40px;
-    }
-  }
-
-  p {
-    font-size: 20px;
-    font-weight: 300;
-    color: $text-color;
-    text-align: center;
-    opacity: 0;
-
-    @media only screen and (max-width: 40em) {
-      font-size: 16px;
-    }
-  }
-
-  .profile-picture {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    margin: 10px auto 10px;
-    display: block;
-    opacity: 0;
-  }
 }
 
 // styles for when typekit font is not active

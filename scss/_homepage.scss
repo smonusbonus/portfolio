@@ -1,0 +1,61 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.homepage__profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  // achieve optical center by negative margin
+  // https://services.math.duke.edu/education/ccp/resources/write/design/graphic7.html
+  margin: -70px auto 20px;
+  display: block;
+  opacity: 0;
+}
+
+.homepage__headline {
+  font-family: "adelle-sans", sans-serif;
+  font-size: 70px;
+  font-weight: 600;
+  color: $text-color;
+  opacity: 0;
+
+  /* Define mobile styles */
+  @media only screen and (max-width: 40em) {
+    font-size: 40px;
+  }
+}
+
+.homepage__description {
+  color: $text-color;
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0;
+  margin-bottom: 40px;
+
+  @media only screen and (max-width: 40em) {
+    font-size: 16px;
+  }
+}
+
+.homepage__learn-more-button {
+  background-color: $call-to-action-color;
+  border-radius: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  text-align: center;
+  display: block;
+  opacity: 0;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin: 0 auto;
+  width: 170px;
+
+  &:hover {
+    background-color: $call-to-action-color-hover;
+  }
+}

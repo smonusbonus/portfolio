@@ -1,6 +1,5 @@
 // global variables
-var elements = $(".adapt-height"),
-  timeoutID;
+var timeoutID;
 
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
