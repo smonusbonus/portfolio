@@ -1,0 +1,18 @@
+.button {
+  background-color: $call-to-action-color;
+  border-radius: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  text-align: center;
+  display: block;
+  opacity: 0;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin: 0 auto;
+  width: 170px;
+
+  &:hover {
+    background-color: $call-to-action-color-hover;
+  }
+}

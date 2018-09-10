@@ -402,11 +402,21 @@ template {
 [hidden] {
   display: none; }
 
-html {
-  box-sizing: border-box; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
+.button {
+  background-color: #DCC48E;
+  border-radius: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  text-align: center;
+  display: block;
+  opacity: 0;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin: 0 auto;
+  width: 170px; }
+  .button:hover {
+    background-color: #c6ac70; }
 
 .top-bar {
   background: transparent;
@@ -454,13 +464,20 @@ html {
 .top-bar__link.active .top-bar__link-anchor {
   color: #DCC48E; }
 
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
   background: #ebd8da; }
 
 h1, h2 {
   font-family: "adelle", serif;
   font-weight: 500;
-  color: #444; }
+  color: #444;
+  margin: 0; }
 
 li, p, a, h3, h4, h5, h6 {
   font-family: "adelle-sans", sans-serif;
@@ -570,18 +587,6 @@ p a {
     margin: 10px auto 10px;
     display: block;
     opacity: 0; }
-  .homepage .button {
-    background-color: #DCC48E;
-    font-weight: 400;
-    text-transform: uppercase;
-    transition: all 0.3s;
-    text-align: center;
-    width: 170px;
-    display: block;
-    margin: 40px auto 0;
-    opacity: 0; }
-    .homepage .button:hover {
-      background-color: #c6ac70; }
 
 .wf-inactive .homepage h1 {
   opacity: 1.0; }

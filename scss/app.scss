@@ -1,5 +1,13 @@
 @import "../node_modules/normalize-scss/sass/normalize/import-now";
 
+// general styles
+@import "settings";
+@import "colors";
+
+// components
+@import "buttons";
+@import "top-bar";
+
 // apply box-sizing: border-box to everything
 html {
   box-sizing: border-box;
@@ -7,10 +15,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-@import "settings";
-@import "colors";
-@import "top-bar";
 
 @mixin vertical-align {
   position: relative;
@@ -28,6 +32,7 @@ h1, h2 {
   font-family: "adelle", serif;
   font-weight: 500;
   color: $text-color;
+  margin: 0;
 }
 
 li, p, a, h3, h4, h5, h6 {
@@ -190,22 +195,6 @@ p a {
     margin: 10px auto 10px;
     display: block;
     opacity: 0;
-  }
-
-  .button {
-    background-color: $call-to-action-color;
-    font-weight: 400;
-    text-transform: uppercase;
-    transition: all 0.3s;
-    text-align: center;
-    width: 170px;
-    display: block;
-    margin: 40px auto 0;
-    opacity: 0;
-
-    &:hover {
-      background-color: $call-to-action-color-hover;
-    }
   }
 }
 
