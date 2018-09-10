@@ -499,6 +499,50 @@ template {
 .top-bar__link.active .top-bar__link-anchor {
   color: #DCC48E; }
 
+.statement {
+  overflow: hidden;
+  background-color: #f5f0f0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  @media only screen and (max-width: 40em) {
+    .statement {
+      padding: 70px 0 60px; } }
+
+.statement__content-wrapper {
+  width: 70%;
+  margin: 0 auto; }
+
+.statement__headline,
+.statement__headline--quote {
+  font-size: 42px;
+  line-height: 1.3; }
+  @media only screen and (max-width: 40em) {
+    .statement__headline,
+    .statement__headline--quote {
+      font-size: 24px; } }
+
+.statement__headline--quote {
+  font-style: italic; }
+
+.statement__description {
+  color: #444;
+  font-size: 20px;
+  line-height: 1.6; }
+  @media only screen and (max-width: 40em) {
+    .statement__description {
+      font-size: 16px; } }
+
+.statement__divider {
+  width: 10%;
+  height: 5px;
+  background-color: #293d3f;
+  display: block;
+  margin: 30px 0 25px; }
+  @media only screen and (max-width: 40em) {
+    .statement__divider {
+      width: 25%; } }
+
 html {
   box-sizing: border-box; }
 
@@ -607,7 +651,7 @@ p a {
 .about-me h2 {
   text-align: center;
   margin: 0 0 70px 0;
-  font-size: 40px; }
+  font-size: 42px; }
   @media only screen and (max-width: 40em) {
     .about-me h2 {
       font-size: 30px; } }
@@ -631,34 +675,6 @@ p a {
   @media only screen and (max-width: 40em) {
     .about-me .fact p {
       font-size: 16px; } }
-
-.statement {
-  overflow: hidden;
-  padding: 140px 0 120px;
-  background-color: #f5f0f0; }
-  @media only screen and (max-width: 40em) {
-    .statement {
-      padding: 70px 0 60px; } }
-  .statement .divider {
-    width: 10%;
-    height: 5px;
-    background-color: #293d3f;
-    display: block;
-    margin: 30px 0 25px; }
-    @media only screen and (max-width: 40em) {
-      .statement .divider {
-        width: 25%; } }
-  .statement h2.quote {
-    font-style: italic; }
-  @media only screen and (max-width: 40em) {
-    .statement h2 {
-      font-size: 24px; } }
-  .statement p {
-    color: #444;
-    font-size: 20px; }
-    @media only screen and (max-width: 40em) {
-      .statement p {
-        font-size: 16px; } }
 
 .projects h2 {
   margin: 0 0 60px 0; }

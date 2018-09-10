@@ -7,6 +7,7 @@
 // components
 @import "homepage";
 @import "top-bar";
+@import "statement";
 
 // apply box-sizing: border-box to everything
 html {
@@ -186,7 +187,7 @@ p a {
   h2 {
     text-align: center;
     margin: 0 0 70px 0;
-    font-size: 40px;
+    font-size: 42px;
 
     @media only screen and (max-width: 40em) {
       font-size: 30px;
@@ -223,47 +224,6 @@ p a {
       @media only screen and (max-width: 40em) {
         font-size: 16px;
       }
-    }
-  }
-}
-
-.statement {
-  overflow: hidden;
-  padding: 140px 0 120px;
-  background-color: $background-color-soft;
-
-  @media only screen and (max-width: 40em) {
-    padding: 70px 0 60px;
-  }
-
-  .divider {
-    width: 10%;
-    height: 5px;
-    background-color: #293d3f;
-    display: block;
-    margin: 30px 0 25px;
-
-    @media only screen and (max-width: 40em) {
-      width: 25%;
-    }
-  }
-
-  h2 {
-    &.quote {
-      font-style: italic;
-    }
-
-    @media only screen and (max-width: 40em) {
-      font-size: 24px;
-    }
-  }
-
-  p {
-    color: $text-color;
-    font-size: 20px;
-
-    @media only screen and (max-width: 40em) {
-      font-size: 16px;
     }
   }
 }
