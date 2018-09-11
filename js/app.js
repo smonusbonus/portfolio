@@ -1,10 +1,6 @@
 // global variables
 var timeoutID;
 
-// Foundation JavaScript
-// Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();
-
 $(document).on("ready", function() {
   // init skrollr
   window.setTimeout(function() {
