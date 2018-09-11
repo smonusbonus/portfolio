@@ -9,6 +9,7 @@
 @import "fact";
 @import "homepage";
 @import "top-bar";
+@import "social-media";
 @import "statement";
 
 // apply box-sizing: border-box to everything
@@ -291,58 +292,5 @@ p a {
     &.active {
       border-color: $call-to-action-color;
     }
-  }
-}
-
-
-.social-media {
-  height: 63px;
-  width: 100%;
-  background-color: $background-color;
-  padding: 18px 0 0 0;
-  position: relative;
-
-  @media only screen and (max-width: 40em) {
-    height: 160px;
-  }
-
-  .links {
-    display: flex;
-    justify-content: center;
-  }
-
-  ul li {
-    list-style-type: none;
-    float: left;
-    margin: -3px 15px 0 0;
-
-    @media only screen and (max-width: 40em) {
-      margin: 0 0 10px 0;
-      width: 120px;
-    }
-
-    a {
-
-      .fa {
-        font-size: 26px;
-        margin: 0 8px 0;
-        position: relative;
-        top: 4px;
-      }
-    }
-
-    &:hover {
-      pointer: cursor;
-
-      a {
-      color: $call-to-action-color;
-      }
-    }
-  }
-}
-
-.find-me-online-label {
-  @media only screen and (max-width: 40em) {
-    display: none;
   }
 }

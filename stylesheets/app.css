@@ -538,6 +538,47 @@ template {
 .top-bar__link.active .top-bar__link-anchor {
   color: #DCC48E; }
 
+.social-media {
+  align-items: center;
+  background-color: #ebd8da;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  width: 100%; }
+
+.social-media__label {
+  display: inline-block;
+  margin: 0 20px;
+  line-height: 1.5; }
+  @media only screen and (max-width: 40em) {
+    .social-media__label {
+      width: 100%; } }
+
+.social-media__links {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5; }
+
+.social-media__link {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 20px; }
+  @media only screen and (max-width: 40em) {
+    .social-media__link {
+      margin: 0 0 10px 0;
+      width: 100%; } }
+
+.social-media__link-anchor {
+  text-decoration: none; }
+  .social-media__link-anchor:hover {
+    pointer: cursor;
+    color: #DCC48E; }
+
+.social-media__icon {
+  font-size: 20px;
+  margin: 0 8px 0; }
+
 .statement {
   background-color: #f5f0f0; }
 
@@ -753,39 +794,5 @@ p a {
         margin-bottom: 50px; } }
     .contact .email-field.active {
       border-color: #DCC48E; }
-
-.social-media {
-  height: 63px;
-  width: 100%;
-  background-color: #ebd8da;
-  padding: 18px 0 0 0;
-  position: relative; }
-  @media only screen and (max-width: 40em) {
-    .social-media {
-      height: 160px; } }
-  .social-media .links {
-    display: flex;
-    justify-content: center; }
-  .social-media ul li {
-    list-style-type: none;
-    float: left;
-    margin: -3px 15px 0 0; }
-    @media only screen and (max-width: 40em) {
-      .social-media ul li {
-        margin: 0 0 10px 0;
-        width: 120px; } }
-    .social-media ul li a .fa {
-      font-size: 26px;
-      margin: 0 8px 0;
-      position: relative;
-      top: 4px; }
-    .social-media ul li:hover {
-      pointer: cursor; }
-      .social-media ul li:hover a {
-        color: #DCC48E; }
-
-@media only screen and (max-width: 40em) {
-  .find-me-online-label {
-    display: none; } }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,0 +1,51 @@
+
+.social-media {
+  align-items: center;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.social-media__label {
+  display: inline-block;
+  margin: 0 20px;
+  line-height: 1.5;
+
+  @media only screen and (max-width: 40em) {
+    width: 100%
+  }
+}
+
+.social-media__links {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.social-media__link {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 20px;
+
+  @media only screen and (max-width: 40em) {
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
+}
+
+.social-media__link-anchor {
+  text-decoration: none;
+
+  &:hover {
+    pointer: cursor;
+    color: $call-to-action-color;
+  }
+}
+
+.social-media__icon {
+  font-size: 20px;
+  margin: 0 8px 0;
+}
