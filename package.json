@@ -5,8 +5,8 @@
   "main": "gulpfile.js",
   "private": true,
   "scripts": {
-    "compile-scss": "scss scss/app.scss:stylesheets/app.css",
-    "compile-scss-watch": "scss --watch scss/app.scss:stylesheets/app.css",
+    "compile-scss": "scss scss/app.scss:stylesheets/app.css --style compressed",
+    "compile-scss-watch": "scss --watch scss/app.scss:stylesheets/app.css --style compressed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
