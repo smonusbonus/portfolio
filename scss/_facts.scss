@@ -1,0 +1,16 @@
+.facts__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.facts__headline {
+  text-align: center;
+  margin: 0 0 70px 0;
+  font-size: 42px;
+
+  @media only screen and (max-width: 40em) {
+    font-size: 30px;
+  }
+}

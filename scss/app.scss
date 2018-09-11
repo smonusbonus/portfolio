@@ -5,6 +5,8 @@
 @import "colors";
 
 // components
+@import "facts";
+@import "fact";
 @import "homepage";
 @import "top-bar";
 @import "statement";
@@ -184,51 +186,6 @@ p a {
 
 .who-am-i a {
   color: $text-color;
-}
-
-.about-me {
-  h2 {
-    text-align: center;
-    margin: 0 0 70px 0;
-    font-size: 42px;
-
-    @media only screen and (max-width: 40em) {
-      font-size: 30px;
-    }
-  }
-
-  .fa {
-    color: $text-color;
-  }
-
-  .fact {
-    @media only screen and (max-width: 40em) {
-      margin-bottom: 50px;
-    }
-
-    h3 {
-      text-align: center;
-      margin: 20px 0 20px 0;
-
-      @media only screen and (max-width: 40em) {
-        font-size: 25px;
-      }
-    }
-
-    i {
-      font-size: 90px;
-      display: block;
-      text-align: center;
-    }
-
-    p {
-      text-align: center;
-
-      @media only screen and (max-width: 40em) {
-        font-size: 16px;
-      }
-    }
-  }
 }
 
 .projects {

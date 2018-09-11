@@ -402,6 +402,48 @@ template {
 [hidden] {
   display: none; }
 
+.facts__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 70%; }
+
+.facts__headline {
+  text-align: center;
+  margin: 0 0 70px 0;
+  font-size: 42px; }
+  @media only screen and (max-width: 40em) {
+    .facts__headline {
+      font-size: 30px; } }
+
+.fact {
+  flex: 1 1 25%;
+  padding: 0 20px; }
+  @media only screen and (max-width: 40em) {
+    .fact {
+      margin-bottom: 50px; } }
+
+.fact__icon {
+  font-size: 90px;
+  display: block;
+  text-align: center; }
+
+.fact__headline {
+  font-size: 28px;
+  margin: 20px 0 20px 0;
+  text-align: center; }
+  @media only screen and (max-width: 40em) {
+    .fact__headline {
+      font-size: 25px; } }
+
+.fact__description {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center; }
+  @media only screen and (max-width: 40em) {
+    .fact__description {
+      font-size: 16px; } }
+
 .homepage {
   text-align: center; }
 
@@ -640,34 +682,6 @@ p a {
 
 .who-am-i a {
   color: #444; }
-
-.about-me h2 {
-  text-align: center;
-  margin: 0 0 70px 0;
-  font-size: 42px; }
-  @media only screen and (max-width: 40em) {
-    .about-me h2 {
-      font-size: 30px; } }
-.about-me .fa {
-  color: #444; }
-@media only screen and (max-width: 40em) {
-  .about-me .fact {
-    margin-bottom: 50px; } }
-.about-me .fact h3 {
-  text-align: center;
-  margin: 20px 0 20px 0; }
-  @media only screen and (max-width: 40em) {
-    .about-me .fact h3 {
-      font-size: 25px; } }
-.about-me .fact i {
-  font-size: 90px;
-  display: block;
-  text-align: center; }
-.about-me .fact p {
-  text-align: center; }
-  @media only screen and (max-width: 40em) {
-    .about-me .fact p {
-      font-size: 16px; } }
 
 .projects h2 {
   margin: 0 0 60px 0; }
