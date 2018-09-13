@@ -54,7 +54,7 @@
             <a class="top-bar__link-anchor" href="#competencies">Competencies</a>
           </li>
           <li class="top-bar__link">
-            <a class="top-bar__link-anchor" href="#projects">Projects</a>
+            <a class="top-bar__link-anchor" href="#portfolio">Projects</a>
           </li>
           <li class="top-bar__link">
             <a class="top-bar__link-anchor" href="#about-me">About me</a>
@@ -124,54 +124,48 @@
       </div>
 
 
-      <div class="section-wrapper projects" id="projects">
-        <div class="row">
-          <div class="large-12 medium-12 columns">
-            <h2>These are my most recent projects</h2>
-          </div>
-        </div>
+      <div class="section-wrapper portfolio" id="portfolio">
+        <h2 class="portfolio__headline">Here are my most recent projects</h2>
 
-        <div class="row projects-row">
-          <div class="large-4 medium-4 columns project">
-            <div class="img-wrapper open-modal" data-reveal-id="project-trivia-js">
-              <div class="img-overlay"><p>+</p></div>
-              <img src="img/projects/trivia-js.png" alt="Trivia.js - Javascript Trivia Game">
+        <div class="projects">
+          <div class="project">
+            <div class="project__image-wrapper open-modal" data-reveal-id="project-trivia-js">
+              <div class="project__image-overlay"></div>
+              <img class="project__image" src="img/projects/trivia-js.png" alt="Trivia.js - Javascript Trivia Game">
             </div>
-            <h3 data-reveal-id="project-trivia-js" class="open-modal">TRIVIA.JS</h3>
+            <h3 class="project__title open-modal" data-reveal-id="project-trivia-js">TRIVIA.JS</h3>
             <p>trivia.js is a fun way to test your Javascript knowledge and become a better programmer. It is based on the new frontend framework vue.js and powered by a node.js server.</p>
           </div>
 
-          <div class="large-4 medium-4 columns project">
-            <div class="img-wrapper open-modal" data-reveal-id="project-fb-graph">
-              <div class="img-overlay"><p>+</p></div>
-              <img src="img/projects/facebook-graph.jpg" alt="Facebook Graph Visualisation">
+          <div class="project">
+            <div class="project__image-wrapper open-modal" data-reveal-id="project-fb-graph">
+              <div class="project__image-overlay"></div>
+              <img class="project__image" src="img/projects/facebook-graph.jpg" alt="Facebook Graph Visualisation">
             </div>
-            <h3 data-reveal-id="project-fb-graph" class="open-modal">VIZEX</h3>
+            <h3 class="project__title open-modal" data-reveal-id="project-fb-graph">VIZEX</h3>
             <p>VIZEX is an interactive visualization of a user's Facebook Social Graph. It allows the user to query certain features of the network and be presented with a visual result.</p>
           </div>
 
-          <div class="large-4 medium-4 columns project">
-            <div class="img-wrapper open-modal" data-reveal-id="project-exp-tracker">
-              <div class="img-overlay"><p>+</p></div>
-              <img src="img/projects/expense-tracker.jpg" alt="Expense Tracker">
+          <div class="project">
+            <div class="project__image-wrapper open-modal" data-reveal-id="project-exp-tracker">
+              <div class="project__image-overlay"></div>
+              <img class="project__image" src="img/projects/expense-tracker.jpg" alt="Expense Tracker">
             </div>
-            <h3 data-reveal-id="project-exp-tracker" class="open-modal">Expense Tracker</h3>
+            <h3 class="project__title open-modal" data-reveal-id="project-exp-tracker">Expense Tracker</h3>
             <p>A mobile spending tracker that provides a visual representation of one's spendings throughout a month.</p>
           </div>
-        </div>
 
-        <div class="row projects-row">
-          <div class="large-4 medium-4 columns project">
-            <div class="img-wrapper open-modal" data-reveal-id="project-folktales">
-              <div class="img-overlay"><p>+</p></div>
-              <img src="img/projects/folktales.jpg" alt="Microsoft Surface Touch Table Running the Dutch Folktale Application">
+          <div class="project">
+            <div class="project__image-wrapper open-modal" data-reveal-id="project-folktales">
+              <div class="project__image-overlay"></div>
+              <img class="project__image" src="img/projects/folktales.jpg" alt="Microsoft Surface Touch Table Running the Dutch Folktale Application">
             </div>
-            <h3 data-reveal-id="project-folktales" class="open-modal">Touching Stories</h3>
+            <h3 class="project__title open-modal" data-reveal-id="project-folktales">Touching Stories</h3>
             <p>Touching stories is a novel way of interacting with the Dutch folktale database. Utilising a touch-table the system facilitates the exploration of the database through tangible objects and touch-input.</p>
           </div>
         </div>
 
-        <div id="project-trivia-js" class="reveal-modal" data-reveal>
+        <div class="reveal-modal" id="project-trivia-js" data-reveal>
           <div class="row">
             <div class="large-8 medium-12 columns intro">
               <h2>TRIVIA.JS – A fun way to test your Javascript knowledge</h2>
