@@ -1,13 +1,13 @@
 @import "../node_modules/normalize-scss/sass/normalize/import-now";
 
 // general styles
-@import "settings";
 @import "colors";
 
 // components
 @import "facts";
 @import "fact";
 @import "homepage";
+@import "modal";
 @import "portfolio";
 @import "projects";
 @import "top-bar";

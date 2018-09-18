@@ -22,12 +22,20 @@ $(document).on("ready", function() {
     --------------------
 */
 
-$(document).on("opened.fndtn.reveal", "[data-reveal]", function() {
-  var modal = $(this);
-  $("#" + modal[0]["id"] + " .project-slideshow").slick({
-    dots: true,
-    lazyLoad: "ondemand"
-  });
+// Event listeners for modal
+$("[data-reveal-id]").on("click", function(e) {
+  var modalId =
+    e.target.dataset.revealId || e.target.parentElement.dataset.revealId;
+
+  // Open modal
+  $("#" + modalId).css({ display: "block" });
+  $(".project__modal-wrapper").css({ opacity: 1, display: "flex" });
+});
+
+$(".modal__close-button").on("click", function(e) {
+  var modalId = e.target.parentElement.id;
+  $("#" + modalId).css({ display: "none" });
+  $(".project__modal-wrapper").css({ opacity: 0, display: "none" });
 });
 
 // when user scrolls

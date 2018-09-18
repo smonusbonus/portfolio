@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
 
     <!-- Some configurations for mobile browsers  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
@@ -17,7 +17,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="stylesheets/app.css" />
-    <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick.css" />
 
     <!-- Javascript that's needed on page load -->
     <script src="//use.typekit.net/ijn2wjq.js"></script>
@@ -165,238 +164,178 @@
           </div>
         </div>
 
-        <div class="reveal-modal" id="project-trivia-js" data-reveal>
-          <div class="row">
-            <div class="large-8 medium-12 columns intro">
-              <h2>TRIVIA.JS – A fun way to test your Javascript knowledge</h2>
-              <!--<p class="lead">Your couch.  It is mine.</p>-->
-              <p class="hide-for-small-only">trivia.js is a fun way to test your Javascript knowledge and become a better programmer. It is based on the new frontend framework vue.js and powered by a node.js server.</p>
-            </div>
-          </div>
+        <div class="project__modal-wrapper">
+          <div class="modal" id="project-trivia-js" data-reveal>
+            <button type="button" class="modal__close-button">&#215;</button>
 
-          <div class="row">
-            <div class="large-8 medium-12 columns slideshow">
-              <div class="project-slideshow fb-graph">
-                <div><img data-lazy="img/projects/trivia-js/1.gif" alt=""></div>
-                <div><img data-lazy="img/projects/trivia-js/2.gif" alt=""></div>
-                <div><img data-lazy="img/projects/trivia-js/3.gif" alt=""></div>
-                <div><img data-lazy="img/projects/trivia-js/4.gif" alt=""></div>
+            <div class="modal__intro">
+              <h2 class="modal__intro-title">TRIVIA.JS – A fun way to test your Javascript knowledge</h2>
+              <p class="modal__intro-description">trivia.js is a fun way to test your Javascript knowledge and become a better programmer. It is based on the new frontend framework vue.js and powered by a node.js server.</p>
+            </div>
+
+            <div class="modal__body">
+              <div class="modal__slideshow">
+                <img class="modal__slideshow-image" src="img/projects/trivia-js/1.gif" alt="">
+                <img class="modal__slideshow-image" src="img/projects/trivia-js/2.gif" alt="">
+                <img class="modal__slideshow-image" src="img/projects/trivia-js/3.gif" alt="">
+                <img class="modal__slideshow-image" src="img/projects/trivia-js/4.gif" alt="">
               </div>
-            </div>
 
-            <div class="large-3 medium-12 columns project-details hide-for-small-only">
-              <div class="row">
-                <div class="large-12 medium-3 columns">
-                  <h4>Languages</h4>
-                  <ul>
-                    <li>JavaScript</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                  </ul>
-                </div>
+              <div class="modal__sidebar">
+                <h4 class="modal__sidebar-title">Languages</h4>
+                <ul class="modal__sidebar-list">
+                  <li class="modal__sidebar-list-item">JavaScript</li>
+                  <li class="modal__sidebar-list-item">HTML</li>
+                  <li class="modal__sidebar-list-item">CSS</li>
+                </ul>
 
-                <div class="large-12 medium-3 columns">
-                  <h4>Technologies</h4>
-                  <ul>
-                    <li>node.js</li>
-                    <li>vue.js</li>
-                    <li>MongoDB</li>
-                    <li>Karma/Mocha/Chai</li>
-                  </ul>
-                </div>
+                <h4 class="modal__sidebar-title">Technologies</h4>
+                <ul class="modal__sidebar-list">
+                  <li class="modal__sidebar-list-item">node.js</li>
+                  <li class="modal__sidebar-list-item">vue.js</li>
+                  <li class="modal__sidebar-list-item">MongoDB</li>
+                  <li class="modal__sidebar-list-item">Karma/Mocha/Chai</li>
+                </ul>
 
-                <div class="large-12 medium-3 columns">
-                  <h4>Links</h4>
-                  <p><a href="http://trivia-js.herokuapp.com/" target="_blank">Try Game</a></p>
-                </div>
+                <h4 class="modal__sidebar-title">Links</h4>
+                <a class="modal__sidebar-link" href="http://trivia-js.herokuapp.com/" target="_blank">Try Game</a>
               </div>
             </div>
           </div>
-          <a class="close-reveal-modal">&#215;</a>
+
+          <div class="modal" id="project-fb-graph" data-reveal>
+            <button type="button" class="modal__close-button">&#215;</button>
+
+            <div class="modal__intro">
+              <h2 class="modal__intro-title">VIZEX – Facebook Graph Speech Exploration</h2>
+              <p class="modal__intro-description">VIZEX is an interactive visualization of a user's Facebook Social Graph. It allows the user to query certain features of the network and be presented with a visual result.</p>
+            </div>
+
+            <div class="modal__body">
+              <div class="modal__slideshow">
+                <img class="modal__slideshow-image" src="img/projects/fb-graph/1.jpg" alt="">
+                <img class="modal__slideshow-image" src="img/projects/fb-graph/2.jpg" alt="">
+                <img class="modal__slideshow-image" src="img/projects/fb-graph/3.jpg" alt="">
+              </div>
+
+              <div class="modal__sidebar">
+                <h4 class="modal__sidebar-title">Languages</h4>
+                <ul class="modal__sidebar-list">
+                  <li class="modal__sidebar-list-item">HTML</li>
+                  <li class="modal__sidebar-list-item">CSS</li>
+                  <li class="modal__sidebar-list-item">Javascript</li>
+                  <li class="modal__sidebar-list-item">PHP</li>
+                  <li class="modal__sidebar-list-item">SQL</li>
+                </ul>
+
+                <h4 class="modal__sidebar-title">Technologies</h4>
+                <ul class="modal__sidebar-list">
+                  <li class="modal__sidebar-list-item">Google Speech API</li>
+                  <li class="modal__sidebar-list-item">wit.ai Natural Language API</li>
+                  <li class="modal__sidebar-list-item">Facebook Graph API</li>
+                  <li class="modal__sidebar-list-item">HTML5 Canvas</li>
+                  <li class="modal__sidebar-list-item">AJAX</li>
+                  <li class="modal__sidebar-list-item"></li>
+                </ul>
+
+                <h4 class="modal__sidebar-title">Responsible for</h4>
+                <ul class="modal__sidebar-list">
+                  <li class="modal__sidebar-list-item">Processing of Queries</li>
+                  <li class="modal__sidebar-list-item">Facebook API</li>
+                  <li class="modal__sidebar-list-item">Backend &amp; MySQL Database</li>
+                </ul>
+
+                <h4 class="modal__sidebar-title">Links</h4>
+                <a class="modal__sidebar-link" href="http://vimeo.com/84522056" target="_blank">Video</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" id="project-exp-tracker" data-reveal>
+            <button type="button" class="modal__close-button">&#215;</button>
+
+            <div class="modal__intro">
+              <h2 class="modal__intro-title">Expense Tracker</h2>
+              <p class="modal__intro-description">The aim was to design and develop an expense tracking app, which allows users to track the amount of money they spent in a straightforward way. The spendings are grouped in categories and visualized throughout the month.</p>
+            </div>
+
+            <div class="modal__body">
+              <div class="modal__slideshow">
+                <img class="modal__slideshow-image" src="img/projects/exp-tracker/1.jpg" alt="">
+                <img class="modal__slideshow-image" src="img/projects/exp-tracker/2.jpg" alt="">
+                <img class="modal__slideshow-image" src="img/projects/exp-tracker/3.jpg" alt="">
+                <img class="modal__slideshow-image" src="img/projects/exp-tracker/4.jpg" alt="">
+                <img class="modal__slideshow-image" src="img/projects/exp-tracker/5.jpg" alt="">
+                <img class="modal__slideshow-image" src="img/projects/exp-tracker/6.jpg" alt="">
+                <img class="modal__slideshow-image" src="img/projects/exp-tracker/7.jpg" alt="">
+              </div>
+
+              <div class="modal__sidebar">
+                <h4 class="modal__sidebar-title">Languages</h4>
+                <ul class="modal__sidebar-list">
+                  <li class="modal__sidebar-list-item">HTML</li>
+                  <li class="modal__sidebar-list-item">CSS</li>
+                  <li class="modal__sidebar-list-item">Javascript</li>
+                </ul>
+
+                <h4 class="modal__sidebar-title">Technologies</h4>
+                <ul class="modal__sidebar-list">
+                  <li class="modal__sidebar-list-item">Angular.JS</li>
+                  <li class="modal__sidebar-list-item">Zurb Foundation Framework</li>
+                  <li class="modal__sidebar-list-item">Ratchet Mobile App Framework</li>
+                  <li class="modal__sidebar-list-item">JSON</li>
+                </ul>
+
+                <h4 class="modal__sidebar-title">Responsible for</h4>
+                <ul class="modal__sidebar-list">
+                  <li class="modal__sidebar-list-item">Visual Design</li>
+                  <li class="modal__sidebar-list-item">Interaction Design</li>
+                  <li class="modal__sidebar-list-item">Functionality of Feed and Settings</li>
+                </ul>
+
+                <h4 class="modal__sidebar-title">Links</h4>
+                <a class="modal__sidebar-link" href="http://vimeo.com/96205826" target="_blank">Video</a>
+              </div>
+            </div>
+          </div>
+
+          <div id="project-folktales" class="modal" data-reveal>
+              <button type="button" class="modal__close-button">&#215;</button>
+
+              <div class="modal__intro">
+                <h2 class="modal__intro-title">Touching Stories - A Tangible Exploration of the Dutch Folktale Database</h2>
+                <p class="modal__intro-description">Touching stories is a novel way of interacting with the Dutch folktale database. Utilising a touch-table the system facilitates the exploration of the database through tangible objects and touch-input and furthermore allows users to see relations between stories, locations and characters.</p>
+              </div>
+
+            <div class="modal__body">
+              <div class="modal__slideshow">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ATumdKel9ts" frameborder="0" allowfullscreen></iframe>
+              </div>
+
+              <div class="modal__sidebar">
+                <h4 class="modal__sidebar-title">Languages</h4>
+                <ul class="modal__sidebar-list">
+                  <li class="modal__sidebar-list-item">C#</li>
+                  <li class="modal__sidebar-list-item">WPA</li>
+                </ul>
+
+                <h4 class="modal__sidebar-title">Technologies</h4>
+                <ul class="modal__sidebar-list">
+                  <li class="modal__sidebar-list-item">.NET Framework</li>
+                  <li class="modal__sidebar-list-item">Microsoft Surface</li>
+                </ul>
+
+                <h4 class="modal__sidebar-title">Responsible for</h4>
+                <ul class="modal__sidebar-list">
+                  <li class="modal__sidebar-list-item">Interaction Design, Development, User Tests</li>
+                </ul>
+
+                <h4 class="modal__sidebar-title">Links</h4>
+                <a class="modal__sidebar-link" href="http://www.verhalenbank.nl/" target="_blank">verhalenbank.nl/</a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div id="project-fb-graph" class="reveal-modal" data-reveal>
-          <div class="row">
-            <div class="large-8 medium-12 columns intro">
-              <h2>VIZEX – Facebook Graph Speech Exploration</h2>
-              <!--<p class="lead">Your couch.  It is mine.</p>-->
-              <p class="hide-for-small-only">VIZEX is an interactive visualization of a user's Facebook Social Graph. It allows the user to query certain features of the network and be presented with a visual result.</p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="large-8 medium-12 columns slideshow">
-              <div class="project-slideshow fb-graph">
-                <div><img data-lazy="img/projects/fb-graph/1.jpg" alt=""></div>
-                <div><img data-lazy="img/projects/fb-graph/2.jpg" alt=""></div>
-                <div><img data-lazy="img/projects/fb-graph/3.jpg" alt=""></div>
-              </div>
-            </div>
-
-            <div class="large-3 medium-12 columns project-details hide-for-small-only">
-              <div class="row">
-                <div class="large-12 medium-3 columns">
-                  <h4>Languages</h4>
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>PHP</li>
-                    <li>SQL</li>
-                  </ul>
-                </div>
-
-                <div class="large-12 medium-3 columns">
-                  <h4>Technologies</h4>
-                  <ul>
-                    <li>Google Speech API</li>
-                    <li>wit.ai Natural Language API</li>
-                    <li>Facebook Graph API</li>
-                    <li>HTML5 Canvas</li>
-                    <li>AJAX</li>
-                    <li></li>
-                  </ul>
-                </div>
-
-                <div class="large-12 medium-3 columns">
-                  <h4>Responsible for</h4>
-                  <ul>
-                    <li>Processing of Queries</li>
-                    <li>Facebook API</li>
-                    <li>Backend &amp; MySQL Database</li>
-                  </ul>
-                </div>
-
-                <div class="large-12 medium-3 columns">
-                  <h4>Links</h4>
-                  <p><a href="http://vimeo.com/84522056" target="_blank">Video</a></p>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-
-          <a class="close-reveal-modal">&#215;</a>
-        </div>
-
-        <div id="project-exp-tracker" class="reveal-modal" data-reveal>
-          <div class="row">
-            <div class="large-8 medium-12 columns intro">
-              <h2>Expense Tracker</h2>
-              <p class="hide-for-small-only">The aim was to design and develop an expense tracking app, which allows users to track the amount of money they spent in a straightforward way. The spendings are grouped in categories and visualized throughout the month.</p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="large-8 medium-12 columns slideshow">
-              <div class="project-slideshow exp-tracker">
-                <div><img data-lazy="img/projects/exp-tracker/1.jpg" alt=""></div>
-                <div><img data-lazy="img/projects/exp-tracker/2.jpg" alt=""></div>
-                <div><img data-lazy="img/projects/exp-tracker/3.jpg" alt=""></div>
-                <div><img data-lazy="img/projects/exp-tracker/4.jpg" alt=""></div>
-                <div><img data-lazy="img/projects/exp-tracker/5.jpg" alt=""></div>
-                <div><img data-lazy="img/projects/exp-tracker/6.jpg" alt=""></div>
-                <div><img data-lazy="img/projects/exp-tracker/7.jpg" alt=""></div>
-              </div>
-            </div>
-
-            <div class="large-3 medium-12 columns project-details hide-for-small-only">
-
-              <div class="row">
-                <div class="large-12 medium-3 columns">
-                  <h4>Languages</h4>
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                  </ul>
-                </div>
-
-                <div class="large-12 medium-3 columns">
-                  <h4>Technologies</h4>
-                  <ul>
-                    <li>Angular.JS</li>
-                    <li>Zurb Foundation Framework</li>
-                    <li>Ratchet Mobile App Framework</li>
-                    <li>JSON</li>
-                  </ul>
-                </div>
-
-                <div class="large-12 medium-3 columns">
-                  <h4>Responsible for</h4>
-                  <ul>
-                    <li>Visual Design</li>
-                    <li>Interaction Design</li>
-                    <li>Functionality of Feed and Settings</li>
-                  </ul>
-                </div>
-
-                <div class="large-12 medium-3 columns">
-                  <h4>Links</h4>
-                  <p><a href="http://vimeo.com/96205826" target="_blank">Video</a></p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <a class="close-reveal-modal">&#215;</a>
-        </div>
-
-        <div id="project-folktales" class="reveal-modal" data-reveal>
-          <div class="row">
-            <div class="large-8 medium-12 columns intro">
-              <h2>Touching Stories - A Tangible Exploration of the Dutch Folktale Database</h2>
-              <!--<p class="lead">Your couch.  It is mine.</p>-->
-              <p class="hide-for-small-only">Touching stories is a novel way of interacting with the Dutch folktale database. Utilising a touch-table the system facilitates the exploration of the database through tangible objects and touch-input and furthermore allows users to see relations between stories, locations and characters.</p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="large-8 medium-12 columns slideshow">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/ATumdKel9ts" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class="large-3 medium-12 columns project-details hide-for-small-only">
-              <div class="row">
-                <div class="large-12 medium-3 columns">
-                  <h4>Languages</h4>
-                  <ul>
-                    <li>C#</li>
-                    <li>WPA</li>
-                  </ul>
-                </div>
-
-
-                <div class="large-12 medium-3 columns">
-                  <h4>Technologies</h4>
-                  <ul>
-                    <li>.NET Framework</li>
-                    <li>Microsoft Surface</li>
-                  </ul>
-                </div>
-
-                <div class="large-12 medium-3 columns">
-                  <h4>Responsible for</h4>
-                  <ul>
-                    <li>Interaction Design, Development, User Tests</li>
-                  </ul>
-                </div>
-
-                <div class="large-12 medium-3 columns">
-                  <h4>Links</h4>
-                  <p>
-                    <a href="http://www.verhalenbank.nl/" target="_blank">verhalenbank.nl/</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <a class="close-reveal-modal">&#215;</a>
-        </div>
-
       </div>
 
       <div class="section-wrapper statement">
@@ -492,7 +431,6 @@
       crossorigin="anonymous"></script>
     <script src="bower_components/skrollr/dist/skrollr.min.js"></script>
     <script src="bower_components/skrollr-menu/dist/skrollr.menu.min.js"></script>
-    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
