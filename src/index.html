@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 
     <!-- Some configurations for mobile browsers  -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="description" content="I'm an interaction designer and hacker and I love building products for the digital age.">
@@ -36,39 +36,35 @@
   </head>
   <body>
 
-    <div class="fixed hide-for-small-only">
-      <nav class="top-bar" data-topbar>
-        <ul class="top-bar__link-list">
-          <li class="top-bar__link--title">
-            <a class="top-bar__link-anchor" href="#homepage" data-anchor-target="#homepage">Simon Kreiser</a>
-          </li>
-        </ul>
+    <nav class="top-bar">
+      <ul class="top-bar__link-list">
+        <li class="top-bar__link--title">
+          <a class="top-bar__link-anchor" href="#homepage">Simon Kreiser</a>
+        </li>
+      </ul>
 
-        <!-- Right Nav Section -->
-        <ul class="top-bar__link-list" id="skrollr-nav">
-          <li class="top-bar__link">
-            <a class="top-bar__link-anchor" href="#who-am-i">Who am I</a>
-          </li>
-          <li class="top-bar__link">
-            <a class="top-bar__link-anchor" href="#competencies">Competencies</a>
-          </li>
-          <li class="top-bar__link">
-            <a class="top-bar__link-anchor" href="#portfolio">Projects</a>
-          </li>
-          <li class="top-bar__link">
-            <a class="top-bar__link-anchor" href="#about-me">About me</a>
-          </li>
-          <li class="top-bar__link">
-            <a class="top-bar__link-anchor" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <!-- Right Nav Section -->
+      <ul class="top-bar__link-list">
+        <li class="top-bar__link">
+          <a class="top-bar__link-anchor" href="#who-am-i">Who am I</a>
+        </li>
+        <li class="top-bar__link">
+          <a class="top-bar__link-anchor" href="#competencies">Competencies</a>
+        </li>
+        <li class="top-bar__link">
+          <a class="top-bar__link-anchor" href="#portfolio">Projects</a>
+        </li>
+        <li class="top-bar__link">
+          <a class="top-bar__link-anchor" href="#about-me">About me</a>
+        </li>
+        <li class="top-bar__link">
+          <a class="top-bar__link-anchor" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
 
-    <!-- needed for mobile browsers -->
-    <div id="skrollr-body">
-
-      <div class="section-wrapper homepage" id="homepage" data-menu-offset="-45">
+    <div>
+      <div class="section-wrapper homepage" id="homepage">
         <div>
           <img src="img/profile-pic.jpg" alt="Simon Kreiser" class="homepage__profile-picture" id="image-fade">
           <h1 class="homepage__headline" id="headline-fade">Simon Kreiser</h1>
@@ -309,7 +305,7 @@
 
             <div class="modal__body">
               <div class="modal__slideshow">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ATumdKel9ts" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ATumdKel9ts" allowfullscreen></iframe>
               </div>
 
               <div class="modal__sidebar">
@@ -425,12 +421,6 @@
       </div>
     </div>
 
-    <script
-      src="https://code.jquery.com/jquery-2.2.4.min.js"
-      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-      crossorigin="anonymous"></script>
-    <script src="bower_components/skrollr/dist/skrollr.min.js"></script>
-    <script src="bower_components/skrollr-menu/dist/skrollr.menu.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="dist/js/bundle.js"></script>
   </body>
 </html>

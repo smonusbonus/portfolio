@@ -1,13 +1,10 @@
+import * as $ from "jquery";
+import { getActiveSectionId, getSectionPositions } from "./uiUtils.js";
+
 // global variables
 var timeoutID;
 
-$(document).on("ready", function() {
-  // init skrollr
-  window.setTimeout(function() {
-    var s = skrollr.init();
-    skrollr.menu.init(s);
-  }, 0);
-
+$(document).ready(function() {
   window.setTimeout(function() {
     $("#headline-fade").fadeTo(500, 1);
     $("#paragraph-fade").fadeTo(500, 1);
@@ -40,19 +37,18 @@ $(".modal__close-button").on("click", function(e) {
 
 // when user scrolls
 $(window).on("scroll", function() {
-  var scrollTop = $(document).scrollTop(),
-    sectionsArray;
-
-  checkTobBarStatus(scrollTop);
+  updateTopBarScrollStatus();
 
   // clear timeout before starting new one
   // prohibits function from triggering all the time
   // when user scrolls
   window.clearTimeout(timeoutID);
   timeoutID = window.setTimeout(function() {
-    sectionsArray = calcSectionsHeight($("#skrollr-nav"));
-    activeSection = defineActiveSection(sectionsArray, scrollTop);
-    changeNavActive($('a[href$="' + activeSection + '"]'));
+    var scrollTop = $(document).scrollTop();
+    var sections = getSectionPositions($(".top-bar"));
+    var activeSectionId = getActiveSectionId(sections, scrollTop);
+    updateUrl(activeSectionId);
+    changeNavActive($('a[href$="' + activeSectionId + '"]'));
   }, 100);
 });
 
@@ -84,38 +80,17 @@ function changeNavActive(clickedElm) {
     .addClass("active");
 }
 
-function defineActiveSection(sectionsArray, currentScrollHeight) {
-  var index = 0,
-    activeId = "";
-
-  while (index < sectionsArray["pos"].length) {
-    if (
-      currentScrollHeight + 70 >= sectionsArray["pos"][index] &&
-      currentScrollHeight < sectionsArray["pos"][index + 1] &&
-      index < sectionsArray.length
-    ) {
-      activeId = sectionsArray["ids"][index];
-    } else if (currentScrollHeight + 70 >= sectionsArray["pos"][index]) {
-      activeId = sectionsArray["ids"][index];
-    }
-    index++;
-  }
-
-  updateUrl(activeId);
-  return activeId;
-}
-
 function updateUrl(id) {
   var stateObj = { stateId: id };
   try {
     history.pushState(stateObj, "", id);
-    //window.location = id;
   } catch (err) {
     // Handle error(s) here
   }
 }
 
-function checkTobBarStatus(scrollTop) {
+function updateTopBarScrollStatus() {
+  var scrollTop = $(document).scrollTop();
   var topBar = $(".top-bar");
 
   if (scrollTop > 50 && $(topBar).not(".scrolled").length > 0) {
@@ -143,29 +118,4 @@ function selectText(element) {
     selection.removeAllRanges();
     selection.addRange(range);
   }
-}
-
-function calcSectionsHeight(nav) {
-  var elmId,
-    elmPos,
-    sectionsArray = [],
-    idArray = [],
-    posArray = [];
-
-  idArray.push("#homepage");
-  posArray.push(0.0);
-
-  $(nav)
-    .children("li")
-    .each(function() {
-      elmId = this.children[0].hash;
-      idArray.push(elmId);
-      elmPos = $(elmId).offset();
-      posArray.push(elmPos.top);
-    });
-
-  sectionsArray.ids = idArray;
-  sectionsArray.pos = posArray;
-
-  return sectionsArray;
 }

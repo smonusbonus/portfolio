@@ -5,9 +5,10 @@
   "main": "gulpfile.js",
   "private": true,
   "scripts": {
+    "build": "webpack",
+    "test": "jest",
     "compile-scss": "scss scss/app.scss:stylesheets/app.css --style compressed",
-    "compile-scss-watch": "scss --watch scss/app.scss:stylesheets/app.css --style compressed",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile-scss-watch": "scss --watch scss/app.scss:stylesheets/app.css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -19,10 +20,17 @@
   },
   "homepage": "https://github.com/smonusbonus/portfolio#readme",
   "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-jest": "23.6.0",
+    "babel-preset-env": "1.7.0",
     "gulp": "^3.9.1",
-    "gulp-minify-html": "^1.0.6"
+    "gulp-minify-html": "^1.0.6",
+    "jest": "23.6.0",
+    "webpack": "4.19.1",
+    "webpack-cli": "3.1.0"
   },
   "dependencies": {
+    "jquery": "3.3.1",
     "normalize-scss": "7.0.1"
   }
 }
