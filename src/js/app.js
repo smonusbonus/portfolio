@@ -1,3 +1,7 @@
+// Load assets
+import "../scss/styles.scss";
+
+// Load dependencies
 import * as $ from "jquery";
 import * as Flickity from "flickity";
 

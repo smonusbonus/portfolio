@@ -1,18 +1,15 @@
 .projects {
   margin: 0 auto;
   width: 70%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
 }
 
 .project {
-  width: 30.33%;
-  margin-right: 4.5%;
-  display: inline-block;
+  width: 30%;
   margin-bottom: 40px;
   vertical-align: top;
-
-  &:nth-child(3) {
-    margin-right: 0;
-  }
 }
 
 .project__title {

@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "build": "rm -rf public_html && webpack",
     "test": "jest",
     "compile-scss": "scss scss/app.scss:stylesheets/app.css --style compressed",
     "compile-scss-watch": "scss --watch scss/app.scss:stylesheets/app.css --style compressed"
@@ -23,9 +23,19 @@
     "babel-core": "6.26.3",
     "babel-jest": "23.6.0",
     "babel-preset-env": "1.7.0",
+    "css-loader": "1.0.0",
+    "file-loader": "2.0.0",
     "gulp": "^3.9.1",
     "gulp-minify-html": "^1.0.6",
+    "html-loader": "0.5.5",
+    "html-webpack-plugin": "3.2.0",
     "jest": "23.6.0",
+    "mini-css-extract-plugin": "0.4.3",
+    "node-sass": "4.9.3",
+    "optimize-css-assets-webpack-plugin": "5.0.1",
+    "sass": "1.14.0",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.0",
     "webpack": "4.19.1",
     "webpack-cli": "3.1.0"
   },
