@@ -1,4 +1,7 @@
 import * as $ from "jquery";
+import * as Flickity from "flickity";
+
+// Load utils
 import { getActiveSectionId, getSectionPositions } from "./uiUtils.js";
 
 // global variables
@@ -23,6 +26,13 @@ $(document).ready(function() {
 $("[data-reveal-id]").on("click", function(e) {
   var modalId =
     e.target.dataset.revealId || e.target.parentElement.dataset.revealId;
+
+  var slideshow = document.querySelector(".modal__slideshow." + modalId);
+  var flkty = new Flickity(slideshow, {
+    // options
+    cellAlign: "left",
+    contain: true
+  });
 
   // Open modal
   $("#" + modalId).css({ display: "block" });
