@@ -3,4 +3,3 @@ scss/.sass-cache/*
 *.map
 *.DS_Store
 node_modules/
-public_html
