@@ -24,6 +24,12 @@
       color: white;
       width: 100%;
       min-height: 50px;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .tab-bar.show {
+      opacity: 1;
     }
 
     .tab-bar-button {
@@ -59,5 +65,31 @@
 
 <script>
   const tabBar = document.querySelector(".tab-bar");
+  let lastCrollPos = 0;
+  let timeoutHandle;
+
+  function handleScroll(event) {
+    const currentScrollPos = window.scrollY;
+
+    if (currentScrollPos < lastCrollPos) {
+      tabBar.classList.add("show");
+    } else {
+      tabBar.classList.remove("show");
+    }
+
+    lastCrollPos = currentScrollPos;
+
+    console.log('scrolling');
+    console.log(event);
+    console.log(currentScrollPos);
+  }
+
+  window.addEventListener("scroll", (event) => {
+    if (timeoutHandle) {
+      window.clearTimeout(timeoutHandle);
+    }
+    timeoutHandle = window.setTimeout(() => handleScroll(event), 20);
+
+  });
 </script>
 </html>

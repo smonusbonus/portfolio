@@ -17,19 +17,21 @@
 
     .tab-bar {
       position: fixed;
-      bottom: 0;
       left: 0;
       background-color: black;
       display: flex;
       color: white;
       width: 100%;
-      min-height: 50px;
+      transition: bottom 0.2s ease-in-out 0s;
+      height: 50px;
+      bottom: 0;
     }
 
     .tab-bar-button {
       border-right: 1px solid white;
       width: 25%;
       text-align: center;
+      color: white;
     }
 
     .tab-bar-button:last-child {
@@ -50,14 +52,44 @@
   <div class="product">Product 9</div>
   <div class="product">Product 10</div>
   <div class="tab-bar">
-    <div class="tab-bar-button">Button 1</div>
-    <div class="tab-bar-button">Button 2</div>
-    <div class="tab-bar-button">Button 3</div>
-    <div class="tab-bar-button">Button 4</div>
+    <a href="#" class="tab-bar-button">Button 1</a>
+    <a href="#" class="tab-bar-button">Button 2</a>
+    <a href="#" class="tab-bar-button">Button 3</a>
+    <a href="#" class="tab-bar-button">Button 4</a>
   </div>
 </body>
 
 <script>
   const tabBar = document.querySelector(".tab-bar");
+  const THROTTLING_MS = 10;
+  const TOP_OF_PAGE_THRESHOLD = 100;
+  const SCROLL_TOLERANCE = 20;
+  let lastCrollPos = 0;
+  let timeoutHandle;
+
+  function handleScroll(event) {
+    const currentScrollPos = window.scrollY;
+
+    console.log(event);
+    console.log('lastCrollPos', lastCrollPos);
+    console.log('currentScrollPos + SCROLL_TOLERANCE', currentScrollPos + SCROLL_TOLERANCE)
+    console.log('currentScrollPos', currentScrollPos);
+
+    if (currentScrollPos < lastCrollPos || currentScrollPos < TOP_OF_PAGE_THRESHOLD) {
+      tabBar.style.bottom = "0";
+    } else {
+      tabBar.style.bottom = "-50px";
+    }
+
+    lastCrollPos = currentScrollPos;
+  }
+
+  window.addEventListener("scroll", (event) => {
+    if (timeoutHandle) {
+      window.clearTimeout(timeoutHandle);
+    }
+    timeoutHandle = window.setTimeout(() => handleScroll(event), THROTTLING_MS);
+
+  });
 </script>
 </html>
