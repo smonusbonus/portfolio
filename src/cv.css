@@ -1,0 +1,86 @@
+.row {
+  margin-bottom: 1em;
+}
+
+.header-row {
+  margin-bottom: 2.5em;
+}
+
+.profile-picture {
+  width: 5em;
+  height: 5em;
+  border-radius: 2.5em;
+  display: block;
+  margin-right: 1em;
+  margin-top: 0.7em;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 2rem 0 0 0;
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5em;
+  letter-spacing: 0;
+  line-height: 1.25;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: 0;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+p, li {
+  font-size: 0.9em;
+}
+
+td, th {
+  padding: 0.5em 1.2em;
+}
+
+.subline {
+  color: #aaa;
+  margin: 0 0 0.7rem 0;
+}
+
+.minimal-list {
+  list-style-type: none;
+}
+
+.minimal-list li {
+  margin-bottom: 0.5rem;
+}
+
+.row .column {
+  padding: 0 2rem;
+}
+
+.row {
+  flex-direction: row;
+}
+
+@media (min-width: 0) and (max-width: 40.0rem) {
+  body {
+    font-size: 1.3em;
+  }
+}
+
+@media print {
+  a {
+    color: #606c76;
+  }
+
+  .header-row {
+    margin-bottom: 5em;
+  }
+}
