@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "private": true,
   "scripts": {
-    "build": "rm -rf public_html && webpack",
+    "build": "rm -rf public_html && webpack && copy-cv",
+    "copy-cv": "cp ./src/cv.html ./public_html && cp ./src/cv-de.html ./public_html",
     "test": "jest",
     "compile-scss": "scss scss/app.scss:stylesheets/app.css --style compressed",
     "compile-scss-watch": "scss --watch scss/app.scss:stylesheets/app.css --style compressed"
