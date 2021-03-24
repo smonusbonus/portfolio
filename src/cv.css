@@ -7,17 +7,17 @@
 }
 
 .profile-picture {
-  width: 5em;
-  height: 5em;
-  border-radius: 2.5em;
+  width: 6em;
+  height: 6em;
+  border-radius: 3em;
   display: block;
   margin-right: 1em;
-  margin-top: 0.7em;
+  margin-top: 1em;
 }
 
 h1 {
   font-size: 2em;
-  margin: 2rem 0 0 0;
+  margin: 3rem 0 0 0;
 }
 
 h2 {
@@ -45,7 +45,13 @@ p, li {
 }
 
 td, th {
-  padding: 0.5em 1.2em;
+  padding: 0;
+  border-bottom: 0;
+}
+
+td a,
+li a {
+  color: #606c76;
 }
 
 .subline {
@@ -65,8 +71,27 @@ td, th {
   padding: 0 2rem;
 }
 
+.column.column-links {
+  padding-top: 2rem;
+}
+
+.column.column-contact {
+  padding-top: 2rem;
+  text-align: right;
+}
+
 .row {
   flex-direction: row;
+}
+
+.column-links .fa {
+  margin-right: 1rem;
+  min-width: 15px;
+}
+
+.column-contact .fa {
+  margin-left: 1rem;
+  min-width: 15px;
 }
 
 @media (min-width: 0) and (max-width: 40.0rem) {
