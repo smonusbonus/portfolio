@@ -1,3 +1,8 @@
+body {
+  color: #333333;
+  font-size: 16px;
+}
+
 .row {
   margin-bottom: 1em;
 }
@@ -16,17 +21,21 @@
 }
 
 h1 {
+  color: #333333;
+  font-family: 'Roboto Slab', serif;
   font-size: 2em;
+  font-weight: 700;
   margin: 3rem 0 0 0;
 }
 
 h2 {
-  border-bottom: 1px solid #ccc;
-  font-size: 1.5em;
-  letter-spacing: 0;
+  border-bottom: 4px solid #333333;
+  color: #333333;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.8em;
+  font-weight: 700;
   line-height: 1.25;
   padding-bottom: 0.5rem;
-  text-transform: uppercase;
 }
 
 h3 {
