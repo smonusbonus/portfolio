@@ -39,8 +39,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1em;
-  font-weight: 700;
+  font-size: 1.1em;
+  font-weight: 500;
   margin: 0 0 0.2rem 0;
   letter-spacing: 0;
 }
@@ -64,8 +64,10 @@ li a {
 }
 
 .subline {
-  color: #aaa;
-  margin: 0 0 0.7rem 0;
+  color: #797979;
+  margin: 0 0 0.9rem 0;
+  font-weight: 200;
+  font-size: 1em;
 }
 
 .minimal-list {
