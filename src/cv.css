@@ -3,12 +3,17 @@ body {
   font-size: 16px;
 }
 
+.container {
+  padding: 0 1.0rem;
+  max-width: 100rem;
+}
+
 .row {
   margin-bottom: 1em;
 }
 
 .header-row {
-  margin-bottom: 2.5em;
+  margin-bottom: 1.5em;
 }
 
 .profile-picture {
@@ -23,7 +28,7 @@ body {
 h1 {
   color: #333333;
   font-family: 'Roboto Slab', serif;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 700;
   margin: 3rem 0 0 0;
 }
@@ -32,7 +37,7 @@ h2 {
   border-bottom: 4px solid #333333;
   color: #333333;
   font-family: 'Roboto Slab', serif;
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: 700;
   line-height: 1.25;
   padding-bottom: 0.5rem;
@@ -84,6 +89,11 @@ li a {
 
 .column.column-links {
   padding-top: 2rem;
+  min-width: 255px;
+}
+
+.column.column-name {
+  min-width: 315px;
 }
 
 .column.column-contact {
@@ -117,6 +127,20 @@ li a {
   }
 
   .header-row {
-    margin-bottom: 5em;
+    margin-bottom: 3em;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  .column {
+    padding: 0 1rem;
+  }
+
+  .profile-picture {
+    width: 5em;
+    height: 5em;
+    border-radius: 2.5em;
   }
 }
