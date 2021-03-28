@@ -96,7 +96,7 @@ li a {
 .experience-list {
   list-style: disc;
   padding-left: 1.7rem;
-  margin: 0 0 1em;
+  margin: 0 0 2em;
 }
 
 .experience-list li {
@@ -150,10 +150,6 @@ li a {
 }
 
 @media print {
-  a {
-    color: #606c76;
-  }
-
   .header-row {
     margin-bottom: 3em;
   }
