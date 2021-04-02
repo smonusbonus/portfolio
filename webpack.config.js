@@ -7,7 +7,8 @@ module.exports = {
   entry: "./src/js/app.js",
   output: {
     path: path.resolve(__dirname, "public_html"),
-    filename: "[name].js"
+    filename: "[name].js",
+    assetModuleFilename: 'img/[hash][ext][query]'
   },
   module: {
     rules: [
@@ -16,12 +17,12 @@ module.exports = {
         use:[MiniCssExtractPlugin.loader,"css-loader","sass-loader"]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"]
+        test: /\.(png|svg|jpg|gif|ico)$/,
+        type: 'asset/resource'
       },
       {
         test: /\.(html)$/,
-        use: ["html-loader"]
+        loader: "html-loader",
       }
     ]
   },

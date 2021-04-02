@@ -31,16 +31,19 @@ $("[data-reveal-id]").on("click", function(e) {
   var modalId =
     e.target.dataset.revealId || e.target.parentElement.dataset.revealId;
 
-  var slideshow = document.querySelector(".modal__slideshow." + modalId);
-  var flkty = new Flickity(slideshow, {
-    // options
-    cellAlign: "left",
-    contain: true
-  });
-
   // Open modal
   $("#" + modalId).css({ display: "block" });
   $(".project__modal-wrapper").css({ opacity: 1, display: "flex" });
+
+  // init slideshow
+  window.setTimeout(function() {
+    var slideshow = document.querySelector(".modal__slideshow." + modalId);
+    var flkty = new Flickity(slideshow, {
+      // options
+      cellAlign: "left",
+      contain: true
+    });
+  }, 50);
 });
 
 $(".modal__close-button").on("click", function(e) {

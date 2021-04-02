@@ -2,12 +2,15 @@
 <head>
   <meta charset="utf-8">
   <title>Simon Kreiser – CV</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 
   <!-- Font Awesome -->
   <script src="https://use.fontawesome.com/cdc7ee46f4.js"></script>
 
   <!-- Google Fonts -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:200,300,300italic,500,600,700,700italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap">
 
   <!-- CSS Reset -->
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
@@ -22,10 +25,23 @@
 <body>
   <div class="container">
     <div class="row header-row">
-      <div class="column">
+    <div class="column column-links">
+        <ul class="minimal-list">
+          <li><i class="fa fa-github-square"></i><a href="https://github.com/smonusbonus/" target="_blank">github.com/smonusbonus</a></li>
+          <li><i class="fa fa-address-book"></i><a href="http://simonkreiser.com/">simonkreiser.com</a></li>
+          <li><i class="fa fa-linkedin-square"></i><a href="https://www.linkedin.com/in/simonkreiser/" target="_blank">linkedin.com/in/simonkreiser</a></li>
+        </ul>
+      </div>
+      <div class="column column-name">
         <img src="img/profile-pic.jpg" alt="Simon Kreiser" class="profile-picture float-left">
         <h1>Simon Kreiser</h1>
-        <p class="subline">Creative Developer</p>
+        <p class="subline">Software Engineer</p>
+      </div>
+      <div class="column column-contact">
+        <ul class="minimal-list">
+          <li><a href="mailto:simokrei@gmail.com">simokrei@gmail.com</a><i class="fa fa-envelope-square"></i></li>
+          <li><a href="tel:+4915141264404">+49 151 41 26 44 04</a><i class="fa fa-phone-square"></i></li>
+        </ul>
       </div>
     </div>
 
@@ -33,97 +49,114 @@
       <div class="column">
         <h2>Work Experience</h2>
         <h3>Software Engineer at REWE Digital</h3>
-        <p class="subline">October 2017 - present (3 years)</p>
-        <p class="experience">Responsible for search result pages and search suggestions flyout on <a href="https://shop.rewe.de">shop.rewe.de</a>, which consists of a universal Javascript application based on React and NodeJS with server side rendering.</p>
+        <p class="subline">October 2017 - present in Cologne, DE</p>
+        <ul class="tech-list">
+          <li>React</li>
+          <li>Redux</li>
+          <li>NodeJS</li>
+          <li>Typescript</li>
+          <li>SCSS</li>
+          <li>Kotlin</li>
+          <li>Java</li>
+        </ul>
+        <p class="experience">Search result pages and suggestions flyout (<a href="https://shop.rewe.de">shop.rewe.de</a>) delivered as a universal Javascript application embedded in micro frontend architecture.</p>
+        <ul class="experience-list">
+          <li>Used async data fetching to achieve 7s faster load times on mobile devices (3G)</li>
+          <li>Used SSR to achieve 100ms faster load time</li>
+          <li>Achieved JS bundle size reduction of 35% by eliminating dependencies</li>
+          <li>Increased test coverage of React app from 50% to > 80%</li>
+        </ul>
 
         <h3>Frontend Software Engineer at Babbel</h3>
-        <p class="subline">September 2015 - October 2017 (2 years)</p>
-        <p class="experience">In-house software based on AngularJS, Node.JS, Webpack, Bootstrap, SCSS, Github API</p>
+        <p class="subline">September 2015 - October 2017 in Berlin, DE</p>
+        <ul class="tech-list">
+          <li>AngularJS</li>
+          <li>NodeJS</li>
+          <li>RamdaJS</li>
+          <li>Bootstrap</li>
+          <li>AWS</li>
+          <li>Github API</li>
+        </ul>
+        <p class="experience">Implemented UI of an in-house content authoring software.</p>
+        <ul class="experience-list">
+          <li>Reduced app rendering time from 2.7s to 1.2s, by decreasing the amount of watchers and function calls by 50%</li>
+        </ul>
 
         <h3>Master Thesis Intern at Babbel</h3>
-        <p class="subline">February 2015 - August 2015 (6 months)</p>
-        <p class="experience">Thesis: Marrying GUI and Git: How Authoring Tools for E-Learning Can Benefit from Version Control</p>
+        <p class="subline">February 2015 - August 2015 in Berlin, DE</p>
+        <!-- <p class="experience">Thesis: Marrying GUI and Git: How Authoring Tools for E-Learning Can Benefit from Version Control</p> -->
+        <ul class="tech-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Vanilla JS</li>
+          <li>Git</li>
+          <li>Sketch</li>
+          <li>Invision</li>
+        </ul>
+        <p class="experience">UI Prototyping and user testing of in-house authoring software.</p>
+        <ul class="experience-list">
+          <li>Users had 82% task completion rate during first-time-usage</li>
+          <li>Users felt they became productive quickly: 1.77 (from 1-7)</li>
+          <li>High user acceptance, overall satisfaction: 2.11 (from 1-7)</li>
+        </ul>
 
-        <h3>Frontend Developer at Webmatch GmbH</h3>
-        <p class="subline">January 2012 - August 2013 (1 year 8 months)</p>
+        <h3>UI/UX Engineer at Webmatch GmbH</h3>
+        <p class="subline">January 2012 - August 2013 in Cologne, DE</p>
+        <ul class="tech-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>jQuery</li>
+          <li>Facebook API</li>
+        </ul>
         <p class="experience">Large corporate websites, microsites, mobile landing pages, Facebook apps</p>
+        <ul class="experience-list">
+          <li>Implemented Chio Chips Facebook app which helped grow brand follower base by > 5k</li>
+          <li>Successfully relaunched <a href="https://www.ueltje.de/">ueltje.de</a>, which attracted > 10k unique visitors during first month</li>
+        </ul>
       </div>
 
       <div class="column">
         <h2>Education</h2>
         <h3>Master of Science, Human Computer Interaction</h3>
-        <p class="subline">September 2013 - March 2016</p>
+        <p class="subline">September 2013 - March 2016 in Stockholm, SE &amp; Enschede, NL</p>
         <ul class="minimal-list">
           <li>Double Master’s Degree at University of Twente and KTH Royal Institute of Technology</li>
-          <li>Scholarship from European Institute of Innovation & Technology (EIT)</li>
+          <li>Scholarship from European Institute of Innovation & Technology</li>
+          <li>Summer School <em>Future Urban Life and Mobility</em> in Nice, FR (2014)</li>
         </ul>
 
         <h3>Bachelor of Arts, Media Design</h3>
-        <p class="subline">September 2008 - January 2012</p>
+        <p class="subline">September 2008 - January 2012 in Cologne, DE</p>
         <ul class="minimal-list">
           <li>Rheinische Fachhochschule Köln</li>
           <li>Best graduate of the cohort</li>
           <li>Exchange Semester at University of East London (2010)</li>
         </ul>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="column">
+        <h2>Volunteer Experience</h2>
+        <ul class="minimal-list">
+          <li><strong>2018</strong>: Organized frontend bootcamp for new joiners</li>
+          <li><strong>2016</strong>: Volunteer for 3rd Babbel Hackday</li>
+          <li><strong>2014</strong>: Guide and Coach at EIT Master School Kickoff in Budapest</li>
+          <li><strong>2011 &amp; 2012</strong>: Volunteer at Beyond Tellerrand Conference</li>
+          <li><strong>2009 &amp; 2010</strong>: Volunteer at FFK - Flash Forum Konferenz</li>
+        </ul>
+
         <h2>Skills & Expertise</h2>
         <ul class="minimal-list">
           <li>Building large-scale modular frontend applications with React and AngularJS</li>
           <li>Creating performant, responsive and highly usable interfaces</li>
           <li>Pragmatic team player with a passion for learning</li>
         </ul>
-      </div>
 
-      <div class="column">
-        <h2>Volunteer Experience</h2>
-        <ul class="minimal-list">
-          <li><strong>2016</strong>: Volunteer for 3rd Babbel Hackday</li>
-          <li><strong>2014</strong>: Guide and Coach at EIT Master School Kickoff in Budapest</li>
-          <li><strong>2011 &amp; 2012</strong>: Volunteer at Beyond Tellerrand Conference</li>
-          <li><strong>2009 &amp; 2010</strong>: Volunteer at FFK - Flash Forum Konferenz</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="column">
         <h2>Languages</h2>
         <ul class="minimal-list">
           <li>German (native)</li>
           <li>English (fluent)</li>
           <li>Swedish (basic)</li>
+          <li>Dutch (basic)</li>
+          <li>Chinese (basic)</li>
         </ul>
-      </div>
-      <div class="column">
-        <h2>Contact</h2>
-        <table>
-          <tbody>
-            <tr>
-              <td><i class="fa fa-id-card-o"></i></td>
-              <td><a href="http://simonkreiser.com/">simonkreiser.com</a></td>
-            </tr>
-            <tr>
-              <td><i class="fa fa-phone"></i></td>
-              <td><a href="tel:+4915141264404">+49 151 41 26 44 04</a></td>
-            </tr>
-            <tr>
-              <td><i class="fa fa-send"></i></td>
-              <td><a href="mailto:simokrei@gmail.com">simokrei@gmail.com</a></td>
-            </tr>
-            <tr>
-              <td><i class="fa fa-linkedin-square"></i></td>
-              <td><a href="https://www.linkedin.com/in/simonkreiser/" target="_blank">linkedin.com/in/simonkreiser</a></td>
-            </tr>
-            <tr>
-              <td><i class="fa fa-github"></i></td>
-              <td><a href="https://github.com/smonusbonus/" target="_blank">github.com/smonusbonus</a></td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </div>
