@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "build": "rm -rf public_html && webpack --mode=\"production\" && npm run copy-cv",
-    "build-dev": "rm -rf public_html && webpack --mode=\"development\" && npm run copy-cv",
+    "build-dev": "rm -rf public_html && webpack watch --mode=\"development\" && npm run copy-cv",
     "copy-cv": "cp ./src/cv.html ./public_html && cp ./src/cv-de.html ./public_html && cp ./src/cv.css ./public_html && cp ./src/img/profile-pic.jpg ./public_html/img/profile-pic.jpg",
     "dev": "http-server ./public_html",
     "test": "jest",
