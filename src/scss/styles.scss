@@ -19,7 +19,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -35,8 +37,9 @@ body {
   background: $background-color;
 }
 
-h1, h2 {
-  font-family: "adelle", serif;
+h1,
+h2 {
+  font-family: "Roboto Slab", serif;
   font-weight: 500;
   color: $text-color;
   margin: 0;
@@ -48,12 +51,18 @@ h2 {
 
 h3 {
   font-size: 28px;
-  font-weight: normal;
+  font-weight: 500;
   margin: 20px 0 20px 0;
 }
 
-li, p, a, h3, h4, h5, h6 {
-  font-family: "adelle-sans", sans-serif;
+li,
+p,
+a,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
   color: $text-color;
 }
 
@@ -96,19 +105,19 @@ p a {
 // styles for when typekit font is not active
 .wf-inactive .homepage {
   h1 {
-    opacity: 1.0;
+    opacity: 1;
   }
 
   p {
-    opacity: 1.0;
+    opacity: 1;
   }
 
   .profile-picture {
-    opacity: 1.0;
+    opacity: 1;
   }
 
   .button {
-    opacity: 1.0;
+    opacity: 1;
   }
 }
 
@@ -122,7 +131,8 @@ p a {
       margin-bottom: 20px;
     }
 
-    h2, p {
+    h2,
+    p {
       text-align: center;
     }
   }
@@ -143,7 +153,7 @@ p a {
   }
 
   .email-field {
-    font-family: "adelle-sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     padding: 8px 30px 10px 30px;
     display: block;
